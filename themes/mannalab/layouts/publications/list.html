@@ -8,33 +8,9 @@
 {{/* ── TAB NAV ───────────────────────────────────────────── */}}
 <div class="pub-tabnav">
   <div class="container">
-    <a href="#journals" class="pub-tab active" data-section="journals">
-      <div class="pub-tab-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-      </div>
-      <div class="pub-tab-body">
-        <div class="pub-tab-count">{{ len hugo.Data.publications }}</div>
-        <div class="pub-tab-label">Journals</div>
-      </div>
-    </a>
-    <a href="#conferences" class="pub-tab" data-section="conferences">
-      <div class="pub-tab-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-      </div>
-      <div class="pub-tab-body">
-        <div class="pub-tab-count">{{ len hugo.Data.conferences }}</div>
-        <div class="pub-tab-label">Conferences</div>
-      </div>
-    </a>
-    <a href="#book-chapters" class="pub-tab" data-section="book-chapters">
-      <div class="pub-tab-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-      </div>
-      <div class="pub-tab-body">
-        <div class="pub-tab-count">{{ len hugo.Data.book_chapters }}</div>
-        <div class="pub-tab-label">Book Chapters</div>
-      </div>
-    </a>
+    <a href="#journals"      class="pub-tab active" data-section="journals">Journals</a>
+    <a href="#conferences"   class="pub-tab"        data-section="conferences">Conferences</a>
+    <a href="#book-chapters" class="pub-tab"        data-section="book-chapters">Book Chapters</a>
   </div>
 </div>
 
@@ -51,30 +27,33 @@
       {{ $pubs := hugo.Data.publications }}
       {{ if $pubs }}
         {{ $sorted := sort $pubs "year" "desc" }}
+        {{ $total  := len $sorted }}
         {{ $curYear := 0 }}
-        {{ range $sorted }}
-          {{ if ne .year $curYear }}
+        {{ range $i, $p := $sorted }}
+          {{ $num := sub $total $i }}
+          {{ if ne $p.year $curYear }}
             {{ if ne $curYear 0 }}</div></div>{{ end }}
             <div class="pub-year-block">
-            <div class="pub-year-label">{{ .year }}</div>
+            <div class="pub-year-label">{{ $p.year }}</div>
             <div class="pub-list">
-            {{ $curYear = .year }}
+            {{ $curYear = $p.year }}
           {{ end }}
-          <div class="pub-item{{ if .highlighted }} highlighted{{ end }}">
+          <div class="pub-item{{ if $p.highlighted }} highlighted{{ end }}">
+            <div class="pub-num">{{ $num }}</div>
             <div>
-              <div class="pub-title">{{ .title }}</div>
-              <div class="pub-authors">{{ .authors | safeHTML }}</div>
+              <div class="pub-title">{{ $p.title }}</div>
+              <div class="pub-authors">{{ $p.authors | safeHTML }}</div>
               <div class="pub-journal">
-                {{ .journal }}{{ with .volume }}, <strong>{{ . }}</strong>{{ end }}{{ with .pages }}, {{ . }}{{ end }}
+                {{ $p.journal }}{{ with $p.volume }}, <strong>{{ . }}</strong>{{ end }}{{ with $p.pages }}, {{ . }}{{ end }}
               </div>
               <div class="pub-badges">
-                {{ with .doi }}<a href="{{ . }}" class="pub-badge" target="_blank" rel="noopener">DOI</a>{{ end }}
-                {{ with .pdf }}<a href="{{ . }}" class="pub-badge" target="_blank" rel="noopener">PDF</a>{{ end }}
-                {{ with .code }}<a href="{{ . }}" class="pub-badge" target="_blank" rel="noopener">Code</a>{{ end }}
-                {{ with .preprint }}<a href="{{ . }}" class="pub-badge" target="_blank" rel="noopener">Preprint</a>{{ end }}
+                {{ with $p.doi }}<a href="{{ . }}" class="pub-badge" target="_blank" rel="noopener">DOI</a>{{ end }}
+                {{ with $p.pdf }}<a href="{{ . }}" class="pub-badge" target="_blank" rel="noopener">PDF</a>{{ end }}
+                {{ with $p.code }}<a href="{{ . }}" class="pub-badge" target="_blank" rel="noopener">Code</a>{{ end }}
+                {{ with $p.preprint }}<a href="{{ . }}" class="pub-badge" target="_blank" rel="noopener">Preprint</a>{{ end }}
               </div>
             </div>
-            <div class="pub-year-tag">{{ .year }}</div>
+            <div class="pub-year-tag">{{ $p.year }}</div>
           </div>
         {{ end }}
         {{ if ne $curYear 0 }}</div></div>{{ end }}
@@ -91,25 +70,28 @@
       {{ $conf := hugo.Data.conferences }}
       {{ if $conf }}
         {{ $csorted := sort $conf "year" "desc" }}
+        {{ $ctotal  := len $csorted }}
         {{ $cYear := 0 }}
-        {{ range $csorted }}
-          {{ if ne .year $cYear }}
+        {{ range $i, $c := $csorted }}
+          {{ $num := sub $ctotal $i }}
+          {{ if ne $c.year $cYear }}
             {{ if ne $cYear 0 }}</div></div>{{ end }}
             <div class="pub-year-block">
-            <div class="pub-year-label">{{ .year }}</div>
+            <div class="pub-year-label">{{ $c.year }}</div>
             <div class="pub-list">
-            {{ $cYear = .year }}
+            {{ $cYear = $c.year }}
           {{ end }}
           <div class="pub-item">
+            <div class="pub-num">{{ $num }}</div>
             <div>
-              <div class="pub-title">{{ .title }}</div>
-              <div class="pub-authors">{{ .authors | safeHTML }}</div>
-              <div class="pub-journal">{{ .event }}</div>
+              <div class="pub-title">{{ $c.title }}</div>
+              <div class="pub-authors">{{ $c.authors | safeHTML }}</div>
+              <div class="pub-journal">{{ $c.event }}</div>
               <div class="pub-badges">
-                <span class="pub-badge" style="cursor:default">{{ .location }}</span>
+                <span class="pub-badge" style="cursor:default">{{ $c.location }}</span>
               </div>
             </div>
-            <div class="pub-year-tag">{{ .year }}</div>
+            <div class="pub-year-tag">{{ $c.year }}</div>
           </div>
         {{ end }}
         {{ if ne $cYear 0 }}</div></div>{{ end }}
@@ -125,18 +107,21 @@
 
       {{ $chapters := hugo.Data.book_chapters }}
       {{ if $chapters }}
+        {{ $total := len $chapters }}
         <div class="pub-list">
-        {{ range $chapters }}
+        {{ range $i, $ch := $chapters }}
+          {{ $num := sub $total $i }}
           <div class="pub-item">
+            <div class="pub-num">{{ $num }}</div>
             <div>
-              <div class="pub-title">{{ .title }}</div>
-              <div class="pub-authors">{{ .authors | safeHTML }}</div>
-              <div class="pub-journal">In: <em>{{ .book }}</em>. {{ .publisher }}, pp. {{ .pages }}</div>
+              <div class="pub-title">{{ $ch.title }}</div>
+              <div class="pub-authors">{{ $ch.authors | safeHTML }}</div>
+              <div class="pub-journal">In: <em>{{ $ch.book }}</em>. {{ $ch.publisher }}, pp. {{ $ch.pages }}</div>
               <div class="pub-badges">
-                {{ with .doi }}<a href="{{ . }}" class="pub-badge" target="_blank" rel="noopener">DOI</a>{{ end }}
+                {{ with $ch.doi }}<a href="{{ . }}" class="pub-badge" target="_blank" rel="noopener">DOI</a>{{ end }}
               </div>
             </div>
-            <div class="pub-year-tag">{{ .year }}</div>
+            <div class="pub-year-tag">{{ $ch.year }}</div>
           </div>
         {{ end }}
         </div>
@@ -146,7 +131,7 @@
   </div>
 </section>
 
-{{/* ── TAB NAV JS ────────────────────────────────────────── */}}
+{{/* ── TAB JS ────────────────────────────────────────────── */}}
 <script>
 (function () {
   const tabs = document.querySelectorAll('.pub-tab');
