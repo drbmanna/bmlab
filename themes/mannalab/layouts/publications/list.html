@@ -100,7 +100,7 @@
             <div class="pub-list">
             {{ $cYear = .year }}
           {{ end }}
-          <div class="pub-item highlighted">
+          <div class="pub-item">
             <div>
               <div class="pub-title">{{ .title }}</div>
               <div class="pub-authors">{{ .authors | safeHTML }}</div>
@@ -127,7 +127,7 @@
       {{ if $chapters }}
         <div class="pub-list">
         {{ range $chapters }}
-          <div class="pub-item highlighted">
+          <div class="pub-item">
             <div>
               <div class="pub-title">{{ .title }}</div>
               <div class="pub-authors">{{ .authors | safeHTML }}</div>
