@@ -214,13 +214,13 @@ ul    { list-style: none; }
 .card-text  { color: var(--warm-600); font-size: 0.875rem; line-height: 1.65; }
 
 /* research top accents */
-.rc-1 { border-top: 2px solid var(--terra); }
-.rc-2 { border-top: 2px solid #5C6B73; }
-.rc-2 .card-icon { background: rgba(92,107,115,0.08); color: #5C6B73; }
-.rc-3 { border-top: 2px solid #7B6B52; }
-.rc-3 .card-icon { background: rgba(123,107,82,0.08); color: #7B6B52; }
-.rc-4 { border-top: 2px solid #3D5A80; }
-.rc-4 .card-icon { background: rgba(61,90,128,0.08); color: #3D5A80; }
+.rc-teal   { border-top: 2px solid var(--terra); }
+.rc-navy   { border-top: 2px solid #5C6B73; }
+.rc-navy   .card-icon { background: rgba(92,107,115,0.08); color: #5C6B73; }
+.rc-amber  { border-top: 2px solid #7B6B52; }
+.rc-amber  .card-icon { background: rgba(123,107,82,0.08); color: #7B6B52; }
+.rc-purple { border-top: 2px solid #3D5A80; }
+.rc-purple .card-icon { background: rgba(61,90,128,0.08); color: #3D5A80; }
 
 /* --- News --- */
 .news-grid {
