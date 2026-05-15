@@ -1,69 +1,165 @@
 {{ define "main" }}
 
-{{/* ── HERO ─────────────────────────────────────────────── */}}
-<section class="hero">
-  <div class="container">
-    <div class="hero-inner">
+{{/* ── SLIDESHOW ─────────────────────────────────────────── */}}
+<div class="slideshow">
 
-      <div class="hero-photo">
+  <div class="slide active" data-slide="0">
+    {{ if (fileExists "static/img/slides/slide1.jpg") }}
+      <img class="slide-img" src="{{ "img/slides/slide1.jpg" | absURL }}" alt="Research environment">
+    {{ else }}
+      <div class="slide-ph" style="background:linear-gradient(135deg,#111 0%,#1e1e1e 60%,#2a1a0e 100%)">
+        <svg class="slide-bg-pattern" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="600" cy="100" r="180" fill="none" stroke="rgba(183,71,42,0.12)" stroke-width="60"/>
+          <circle cx="600" cy="100" r="100" fill="none" stroke="rgba(183,71,42,0.10)" stroke-width="2"/>
+          <circle cx="150" cy="380" r="120" fill="none" stroke="rgba(183,71,42,0.08)" stroke-width="40"/>
+          <line x1="150" y1="380" x2="600" y2="100" stroke="rgba(183,71,42,0.06)" stroke-width="1"/>
+          <circle cx="400" cy="250" r="4" fill="rgba(183,71,42,0.4)"/>
+          <circle cx="600" cy="100" r="4" fill="rgba(183,71,42,0.4)"/>
+          <circle cx="150" cy="380" r="4" fill="rgba(183,71,42,0.4)"/>
+        </svg>
+      </div>
+    {{ end }}
+    <div class="slide-caption">
+      <div class="slide-label">Research Environment</div>
+      <div class="slide-text">Computational biology at the interface of genomics, structural biology, and evolution</div>
+    </div>
+  </div>
+
+  <div class="slide" data-slide="1">
+    {{ if (fileExists "static/img/slides/slide2.jpg") }}
+      <img class="slide-img" src="{{ "img/slides/slide2.jpg" | absURL }}" alt="Molecular visualization">
+    {{ else }}
+      <div class="slide-ph" style="background:linear-gradient(135deg,#0d1f17 0%,#1b3a2a 60%,#0d2b1e 100%)">
+        <svg class="slide-bg-pattern" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="200" cy="250" r="60" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="2"/>
+          <circle cx="400" cy="150" r="40" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="2"/>
+          <circle cx="600" cy="300" r="50" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="2"/>
+          <circle cx="350" cy="350" r="30" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="2"/>
+          <line x1="200" y1="250" x2="400" y2="150" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+          <line x1="400" y1="150" x2="600" y2="300" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+          <line x1="200" y1="250" x2="350" y2="350" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+          <line x1="600" y1="300" x2="350" y2="350" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+          <circle cx="200" cy="250" r="6" fill="rgba(183,71,42,0.6)"/>
+          <circle cx="400" cy="150" r="6" fill="rgba(183,71,42,0.6)"/>
+          <circle cx="600" cy="300" r="6" fill="rgba(183,71,42,0.6)"/>
+          <circle cx="350" cy="350" r="6" fill="rgba(183,71,42,0.6)"/>
+        </svg>
+      </div>
+    {{ end }}
+    <div class="slide-caption">
+      <div class="slide-label">Molecular Dynamics</div>
+      <div class="slide-text">All-atom simulations of redox-sensitive proteins and oxidative modifications</div>
+    </div>
+  </div>
+
+  <div class="slide" data-slide="2">
+    {{ if (fileExists "static/img/slides/slide3.jpg") }}
+      <img class="slide-img" src="{{ "img/slides/slide3.jpg" | absURL }}" alt="Genomics pipeline">
+    {{ else }}
+      <div class="slide-ph" style="background:linear-gradient(135deg,#1a1200 0%,#2a1e00 60%,#1a1000 100%)">
+        <svg class="slide-bg-pattern" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          {{ range $i := seq 0 15 }}
+          <rect x="{{ mul $i 52 }}" y="0" width="1" height="500" fill="rgba(200,146,10,0.05)"/>
+          {{ end }}
+          {{ range $i := seq 0 9 }}
+          <rect x="0" y="{{ mul $i 55 }}" width="800" height="1" fill="rgba(200,146,10,0.05)"/>
+          {{ end }}
+          <rect x="60" y="80" width="180" height="18" rx="2" fill="rgba(200,146,10,0.15)"/>
+          <rect x="60" y="130" width="280" height="18" rx="2" fill="rgba(200,146,10,0.12)"/>
+          <rect x="60" y="180" width="120" height="18" rx="2" fill="rgba(200,146,10,0.18)"/>
+          <rect x="60" y="230" width="220" height="18" rx="2" fill="rgba(200,146,10,0.10)"/>
+          <rect x="60" y="280" width="160" height="18" rx="2" fill="rgba(200,146,10,0.14)"/>
+          <rect x="60" y="330" width="200" height="18" rx="2" fill="rgba(200,146,10,0.11)"/>
+        </svg>
+      </div>
+    {{ end }}
+    <div class="slide-caption">
+      <div class="slide-label">Genomics &amp; AMR</div>
+      <div class="slide-text">Tracing antimicrobial resistance evolution across clinical and environmental microbiomes</div>
+    </div>
+  </div>
+
+  <div class="slide" data-slide="3">
+    {{ if (fileExists "static/img/slides/slide4.jpg") }}
+      <img class="slide-img" src="{{ "img/slides/slide4.jpg" | absURL }}" alt="Multi-omics">
+    {{ else }}
+      <div class="slide-ph" style="background:linear-gradient(135deg,#0e1520 0%,#1a2535 60%,#0e1828 100%)">
+        <svg class="slide-bg-pattern" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="400" cy="250" r="140" fill="none" stroke="rgba(183,71,42,0.10)" stroke-width="1" stroke-dasharray="6 4"/>
+          <circle cx="400" cy="250" r="90" fill="none" stroke="rgba(183,71,42,0.12)" stroke-width="1" stroke-dasharray="4 6"/>
+          <circle cx="400" cy="250" r="40" fill="none" stroke="rgba(183,71,42,0.15)" stroke-width="1"/>
+          {{ range $a := slice 0 45 90 135 180 225 270 315 }}
+          <line x1="400" y1="250" x2="{{ add 400 (int (mul 140 0.71)) }}" y2="{{ add 250 (int (mul 140 0.71)) }}" stroke="rgba(255,255,255,0.04)" stroke-width="1" transform="rotate({{ $a }} 400 250)"/>
+          {{ end }}
+          <circle cx="400" cy="250" r="8" fill="rgba(183,71,42,0.5)"/>
+        </svg>
+      </div>
+    {{ end }}
+    <div class="slide-caption">
+      <div class="slide-label">Multi-omics Integration</div>
+      <div class="slide-text">Connecting transcriptomics, proteomics, and metabolomics with reproducible open pipelines</div>
+    </div>
+  </div>
+
+  <!-- arrows -->
+  <button class="slide-arrow slide-prev" aria-label="Previous slide">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+  </button>
+  <button class="slide-arrow slide-next" aria-label="Next slide">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+  </button>
+
+  <!-- dots -->
+  <div class="slide-dots">
+    <button class="dot active" data-target="0" aria-label="Slide 1"></button>
+    <button class="dot" data-target="1" aria-label="Slide 2"></button>
+    <button class="dot" data-target="2" aria-label="Slide 3"></button>
+    <button class="dot" data-target="3" aria-label="Slide 4"></button>
+  </div>
+</div>
+
+{{/* ── PI DETAILS ───────────────────────────────────────── */}}
+<section class="pi-section">
+  <div class="container">
+    <div class="pi-inner">
+      <div class="pi-photo">
         {{ if .Site.Params.photo }}
-          <img src="{{ .Site.Params.photo | relURL }}" alt="{{ .Site.Params.pi_name }}">
+          <img src="{{ .Site.Params.photo | absURL }}" alt="{{ .Site.Params.pi_name }}">
         {{ else }}
-          <div class="hero-photo-ph">
-            <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+          <div class="pi-photo-ph">
+            <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
               <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
               <circle cx="12" cy="7" r="4"/>
             </svg>
-            <span>Photo</span>
           </div>
         {{ end }}
       </div>
-
-      <div>
-        <div class="hero-badge">Computational Biology Lab &middot; VIT Vellore</div>
-        <h1 class="hero-name">{{ .Site.Params.pi_name }}</h1>
-        <p class="hero-role">
-          {{ .Site.Params.pi_title }} &middot;
-          <strong>{{ .Site.Params.department }}</strong>
-        </p>
-        <p class="hero-tagline">{{ .Site.Params.tagline }}</p>
-        <div class="hero-links">
+      <div class="pi-info">
+        <div class="pi-badge">Principal Investigator &middot; {{ .Site.Params.affiliation }}</div>
+        <h1 class="pi-name">{{ .Site.Params.pi_name }}</h1>
+        <p class="pi-role">{{ .Site.Params.pi_title }} &middot; <strong>{{ .Site.Params.department }}</strong></p>
+        <p class="pi-tagline">{{ .Site.Params.tagline }}</p>
+        <div class="pi-links">
           {{ with .Site.Params.email }}
-          <a href="mailto:{{ . }}" class="hero-link">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-              <polyline points="22,6 12,12 2,6"/>
-            </svg>
+          <a href="mailto:{{ . }}" class="pi-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
             Email
           </a>
           {{ end }}
           {{ with .Site.Params.google_scholar }}
-          <a href="{{ . }}" class="hero-link" target="_blank" rel="noopener">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/>
-            </svg>
+          <a href="{{ . }}" class="pi-link" target="_blank" rel="noopener">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/></svg>
             Scholar
           </a>
           {{ end }}
           {{ with .Site.Params.orcid }}
-          <a href="{{ . }}" class="hero-link" target="_blank" rel="noopener">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-1.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 3.969-2.484 3.969-3.722 0-2.016-1.284-3.722-3.9-3.722h-2.366z"/>
-            </svg>
-            ORCID
-          </a>
+          <a href="{{ . }}" class="pi-link" target="_blank" rel="noopener">ORCID</a>
           {{ end }}
           {{ with .Site.Params.researchgate }}
-          <a href="{{ . }}" class="hero-link" target="_blank" rel="noopener">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M19.586 0c-.818 0-1.508.19-2.073.565-.563.377-.97.936-1.213 1.68a12.918 12.918 0 0 0-.44 2.772c-.083.525-.19.98-.38 1.372-.19.39-.466.67-.83.838-.364.169-.764.254-1.18.254H13c-.38 0-.786-.067-1.22-.204a3.124 3.124 0 0 1-1.203-.653c-.366-.3-.664-.686-.89-1.157C9.46 3.577 9.344 3.02 9.344 2.373c0-.46.087-.877.26-1.252.173-.374.42-.678.754-.856A1.52 1.52 0 0 1 11.072 0h8.514zm-7.402 9.3c1.145 0 2.07.238 2.774.714.704.476 1.055 1.16 1.055 2.052 0 .571-.163 1.07-.49 1.497-.326.427-.784.73-1.374.908v.04c.714.163 1.263.484 1.648.963.385.48.578 1.064.578 1.752 0 1.036-.38 1.844-1.14 2.424-.76.58-1.795.87-3.107.87H8.2V9.3h3.984zm-.26 4.695h-1.39v3.4h1.39c.656 0 1.168-.146 1.535-.438.368-.292.552-.716.552-1.27 0-.53-.178-.941-.535-1.233-.357-.292-.857-.46-1.553-.46zm-.207-3.52H9.35v3.017h1.367c.617 0 1.097-.14 1.44-.42.344-.28.515-.672.515-1.178 0-.48-.166-.845-.499-1.097-.332-.252-.793-.322-1.456-.322z"/>
-            </svg>
-            ResearchGate
-          </a>
+          <a href="{{ . }}" class="pi-link" target="_blank" rel="noopener">ResearchGate</a>
           {{ end }}
         </div>
       </div>
-
     </div>
   </div>
 </section>
@@ -71,8 +167,8 @@
 {{/* ── RESEARCH HIGHLIGHTS ───────────────────────────────── */}}
 <section class="section section-alt">
   <div class="container">
-    <div class="section-eyebrow"></div>
-    <h2 class="section-title">Research Areas</h2>
+    <div class="eyebrow">Research Areas</div>
+    <h2 class="section-title">What We Work On</h2>
     <p class="section-sub">We combine computation with biology to understand how cells adapt, fail, and evolve.</p>
     <div class="card-grid">
       {{ range $i, $r := hugo.Data.research }}
@@ -86,7 +182,7 @@
       {{ end }}
     </div>
     <div style="margin-top:2rem;text-align:right">
-      <a href="{{ "/research/" | relURL }}" class="btn btn-primary">All research &rarr;</a>
+      <a href="{{ "/research/" | absURL }}" class="btn btn-primary">All research &rarr;</a>
     </div>
   </div>
 </section>
@@ -96,8 +192,8 @@
 {{ if $news }}
 <section class="section">
   <div class="container">
-    <div class="section-eyebrow"></div>
-    <h2 class="section-title">Recent News</h2>
+    <div class="eyebrow">Latest Updates</div>
+    <h2 class="section-title">News</h2>
     <p class="section-sub">Updates from the lab.</p>
     <div class="news-grid">
       {{ range $news }}
@@ -110,7 +206,7 @@
       {{ end }}
     </div>
     <div style="margin-top:1.75rem;text-align:right">
-      <a href="{{ "/news/" | relURL }}">All news &rarr;</a>
+      <a href="{{ "/news/" | absURL }}">All news &rarr;</a>
     </div>
   </div>
 </section>
@@ -121,9 +217,41 @@
   <div class="container">
     <h2>Join the Lab</h2>
     <p>We are recruiting PhD students and project interns. Curiosity and rigour matter more than prior expertise.</p>
-    <a href="{{ "/join/" | relURL }}" class="btn btn-primary">Open Positions</a>
-    <a href="{{ "/contact/" | relURL }}" class="btn btn-outline">Contact</a>
+    <a href="{{ "/join/" | absURL }}" class="btn btn-primary">Open Positions</a>
+    <a href="{{ "/contact/" | absURL }}" class="btn btn-outline">Contact</a>
   </div>
 </div>
+
+{{/* ── SLIDESHOW JS ──────────────────────────────────────── */}}
+<script>
+(function() {
+  const slides = document.querySelectorAll('.slide');
+  const dots   = document.querySelectorAll('.dot');
+  let current  = 0;
+  let timer;
+
+  function goTo(n) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (n + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+
+  function next() { goTo(current + 1); }
+  function prev() { goTo(current - 1); }
+
+  function resetTimer() {
+    clearInterval(timer);
+    timer = setInterval(next, 5000);
+  }
+
+  document.querySelector('.slide-next').addEventListener('click', () => { next(); resetTimer(); });
+  document.querySelector('.slide-prev').addEventListener('click', () => { prev(); resetTimer(); });
+  dots.forEach(d => d.addEventListener('click', () => { goTo(+d.dataset.target); resetTimer(); }));
+
+  timer = setInterval(next, 5000);
+})();
+</script>
 
 {{ end }}
