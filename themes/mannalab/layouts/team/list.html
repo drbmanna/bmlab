@@ -33,7 +33,7 @@
         <div class="team-links">
           {{ with .email }}<a href="mailto:{{ . }}" class="team-link pi-link-btn">Email</a>{{ end }}
           {{ with .vit_link }}<a href="{{ . }}" class="team-link pi-link-btn" target="_blank" rel="noopener">VIT</a>{{ end }}
-          {{ with .scholar }}<a href="{{ . }}" class="team-link pi-link-btn" target="_blank" rel="noopener">Scholar</a>{{ end }}
+          {{ with .scholar }}<a href="{{ . }}" class="team-link pi-link-btn" target="_blank" rel="noopener">Google Scholar</a>{{ end }}
           {{ with .orcid }}<a href="{{ . }}" class="team-link pi-link-btn" target="_blank" rel="noopener">ORCID</a>{{ end }}
           {{ with .linkedin }}<a href="{{ . }}" class="team-link pi-link-btn" target="_blank" rel="noopener">LinkedIn</a>{{ end }}
         </div>
@@ -73,12 +73,12 @@
         </div>
         <div class="team-name">Position Open</div>
         <div class="team-role">PhD Student</div>
-        <div class="team-bio"><a href="{{ "/join/" | relURL }}">Apply &rarr;</a></div>
+        <div class="team-bio"><a href="{{ "/join/" | relURL }}">Join Us &rarr;</a></div>
       </div>
     </div>
 
     {{/* ── Project / Intern Students ── */}}
-    <h2 class="team-section-label">Project &amp; Internship Students</h2>
+    <h2 class="team-section-label">Project Interns</h2>
     <div class="team-grid">
       {{ range where $team "role_type" "project" }}
       <div class="team-card">
@@ -94,7 +94,6 @@
         <div class="team-bio">{{ .bio }}</div>
       </div>
       {{ end }}
-      {{ range seq 2 }}
       <div class="team-card slot">
         <div class="team-photo">
           <div class="team-photo-ph">
@@ -104,10 +103,9 @@
           </div>
         </div>
         <div class="team-name">Position Open</div>
-        <div class="team-role">Project Student</div>
-        <div class="team-bio"><a href="{{ "/join/" | relURL }}">Apply &rarr;</a></div>
+        <div class="team-role">Project Intern</div>
+        <div class="team-bio"><a href="{{ "/join/" | relURL }}">Join Us &rarr;</a></div>
       </div>
-      {{ end }}
     </div>
 
     {{/* ── Alumni (hidden until populated) ── */}}
