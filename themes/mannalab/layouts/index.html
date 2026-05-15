@@ -183,6 +183,15 @@
           {{ end }}
         </div>
         {{ end }}
+        {{ range . }}
+        <div class="collab-item" aria-hidden="true">
+          {{ if .logo }}
+            <img src="{{ .logo | absURL }}" alt="{{ .name }}" loading="lazy">
+          {{ else }}
+            <span>{{ .name }}</span>
+          {{ end }}
+        </div>
+        {{ end }}
       </div>
     </div>
   </div>

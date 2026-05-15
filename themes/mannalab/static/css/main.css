@@ -462,14 +462,15 @@ ul    { list-style: none; }
 .collab-viewport {
   overflow: hidden;
   clip-path: inset(0);
-  margin-top: 2rem;
+  margin: 2rem auto 0;
+  max-width: 62%;
 }
 .collab-track {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 4rem;
-  animation: collab-scroll 6s ease-in-out infinite alternate backwards;
+  width: max-content;
+  animation: collab-scroll 14s linear infinite;
 }
 .collab-viewport:hover .collab-track { animation-play-state: paused; }
 .collab-item {
@@ -503,8 +504,8 @@ ul    { list-style: none; }
   background: var(--terra-pale);
 }
 @keyframes collab-scroll {
-  from { transform: translateX(30%); }
-  to   { transform: translateX(-30%); }
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }
 
 /* --- Slideshow --- */
