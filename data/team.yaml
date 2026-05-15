@@ -4,11 +4,11 @@
   role: "Associate Professor (Research)"
   role_type: "pi"
   department: "School of Biosciences and Technology"
-  location: "VIT Vellore, Tamil Nadu 632014, India"
+  location: "VIT Vellore, Tamil Nadu, India"
   bio: ""
   photo: ""
-  email: "bharat.manna@vit.ac.in"
+  email: "bharatmanna@gmail.com"
   vit_link: ""        # paste your VIT faculty profile URL
-  scholar: ""         # paste full Google Scholar URL
-  orcid: ""           # paste full ORCID URL
-  linkedin: ""        # paste full LinkedIn URL
+  scholar: "https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=X2-6aVoAAAAJ"         # paste full Google Scholar URL
+  orcid: "https://orcid.org/0000-0001-7394-8204"           # paste full ORCID URL
+  linkedin: "https://www.linkedin.com/in/drbmanna"        # paste full LinkedIn URL
