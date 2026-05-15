@@ -1,0 +1,26 @@
+# Collaborating institutions shown on the home page logo strip.
+# logo: path relative to static/ (e.g. img/logos/uoa.png) — leave blank for text fallback.
+
+- name: "University of Auckland"
+  logo: ""
+
+- name: "IIT Kharagpur"
+  logo: ""
+
+- name: "IISER Kolkata"
+  logo: ""
+
+- name: "VIT Vellore"
+  logo: ""
+
+- name: "Water New Zealand"
+  logo: ""
+
+- name: "MAKAUT"
+  logo: ""
+
+- name: "IIT Bombay"
+  logo: ""
+
+- name: "De Gruyter"
+  logo: ""
