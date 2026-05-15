@@ -118,29 +118,6 @@
   </div>
 </div>
 
-{{/* ── RESEARCH HIGHLIGHTS ───────────────────────────────── */}}
-<section class="section section-alt">
-  <div class="container">
-    <div class="eyebrow">Research Areas</div>
-    <h2 class="section-title">What We Work On</h2>
-    <p class="section-sub">We combine computation with biology to understand how cells adapt, fail, and evolve.</p>
-    <div class="card-grid">
-      {{ range $i, $r := hugo.Data.research }}
-        {{ $colors := slice "rc-teal" "rc-navy" "rc-amber" "rc-purple" }}
-        {{ $c := index $colors (mod $i 4) }}
-        <div class="card {{ $c }}">
-          <div class="card-icon">{{ $r.icon | safeHTML }}</div>
-          <div class="card-title">{{ $r.title }}</div>
-          <p class="card-text">{{ $r.summary }}</p>
-        </div>
-      {{ end }}
-    </div>
-    <div style="margin-top:2rem;text-align:right">
-      <a href="{{ "/research/" | absURL }}" class="btn btn-primary">All research &rarr;</a>
-    </div>
-  </div>
-</section>
-
 {{/* ── RECENT NEWS ───────────────────────────────────────── */}}
 {{ $news := where .Site.RegularPages "Section" "news" | first 3 }}
 {{ if $news }}
