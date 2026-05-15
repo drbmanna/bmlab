@@ -469,9 +469,9 @@ ul    { list-style: none; }
 .collab-track {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 4rem;
-  width: max-content;
-  animation: collab-scroll 20s linear infinite;
+  animation: collab-scroll 6s ease-in-out infinite alternate;
 }
 .collab-viewport:hover .collab-track { animation-play-state: paused; }
 .collab-item {
@@ -505,8 +505,8 @@ ul    { list-style: none; }
   background: var(--terra-pale);
 }
 @keyframes collab-scroll {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+  from { transform: translateX(-30%); }
+  to   { transform: translateX(30%); }
 }
 
 /* --- Slideshow --- */
