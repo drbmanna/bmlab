@@ -31,7 +31,7 @@
               {{ .journal }}{{ with .volume }}, <strong>{{ . }}</strong>{{ end }}{{ with .pages }}, {{ . }}{{ end }}
             </div>
             <div class="pub-badges">
-              {{ with .doi }}<a href="https://doi.org/{{ . }}" class="pub-badge" target="_blank" rel="noopener">DOI</a>{{ end }}
+              {{ with .doi }}<a href="{{ . }}" class="pub-badge" target="_blank" rel="noopener">DOI</a>{{ end }}
               {{ with .pdf }}<a href="{{ . }}" class="pub-badge" target="_blank" rel="noopener">PDF</a>{{ end }}
               {{ with .code }}<a href="{{ . }}" class="pub-badge" target="_blank" rel="noopener">Code</a>{{ end }}
               {{ with .preprint }}<a href="{{ . }}" class="pub-badge" target="_blank" rel="noopener">Preprint</a>{{ end }}
