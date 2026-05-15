@@ -1,15 +1,338 @@
-# Add your papers here. Each entry renders automatically on /publications/
-# To bold your name in the authors field use: "<strong>Manna B</strong>, ..."
-# Fields: title, authors, journal, year, doi, pdf, code, preprint, highlighted
+# 28 peer-reviewed publications. DOI fields left blank — fill in from journal pages.
+# * = equal contribution. Bharat Manna bolded in authors.
 
-- title: "Your paper title goes here"
-  authors: "<strong>Manna B</strong>, Collaborator A, Collaborator B"
-  journal: "Journal of Computational Biology"
-  volume: ""
-  pages: ""
+- title: "Minute-Scale Oxic-Anoxic Cycling Enables Nitrous Oxide Reductase Reactivation under Anoxic Conditions to Reduce N2O Emissions in Wastewater Treatment"
+  authors: "Xueyang Zhou, <strong>Bharat Manna</strong>, Boyu Lyu, Catherine Hoar, Naresh Singhal"
+  journal: "Environmental Science & Technology"
+  volume: "60(14)"
+  pages: "10728–10738"
+  year: 2026
+  doi: ""
+  pdf: ""
+  code: ""
+  preprint: ""
+  highlighted: false
+
+- title: "Metabolic Rewiring and Morphological Adaptations Drive Bacterial Strain-Specific Cadmium Defense in the Yangtze River Estuary"
+  authors: "Wensi Zhang, Qian Liu, <strong>Bharat Manna</strong>, Naresh Singhal, Jian Wang, Boyu Lyu, Xueyang Zhou, Yurong Qian"
+  journal: "Microbiological Research"
+  volume: "302"
+  pages: "128326"
+  year: 2026
+  doi: ""
+  pdf: ""
+  code: ""
+  preprint: ""
+  highlighted: false
+
+- title: "L-norepinephrine Induces Community Shift, Oxidative Stress Response, Metabolic Reprogramming, and Virulence Potential in Wastewater Microbiomes"
+  authors: "Amrita Bains*, Sanjeev Dahal*, <strong>Bharat Manna</strong>*, Mark Lyte, Laurence Yang, Naresh Singhal"
+  journal: "Water Research"
+  volume: "287"
+  pages: "124353"
+  year: 2025
+  doi: ""
+  pdf: ""
+  code: ""
+  preprint: ""
+  highlighted: true
+
+- title: "Linking Oxygen-Induced Oxidative Stress to Resource Recovery by Enhancing the Production of Extracellular Polymeric Substances in Activated Sludge Microbial Communities"
+  authors: "Xueyang Zhou, <strong>Bharat Manna</strong>, Boyu Lyu, Naresh Singhal"
+  journal: "Water Research"
+  volume: "286"
+  pages: "124238"
+  year: 2025
+  doi: ""
+  pdf: ""
+  code: ""
+  preprint: ""
+  highlighted: false
+
+- title: "ROS-Induced Stress Promotes Enrichment and Emergence of Antibiotic Resistance in Conventional Activated Sludge Processes"
+  authors: "<strong>Bharat Manna</strong>, Xueyang Zhou, Naresh Singhal"
+  journal: "Water Research"
+  volume: "277"
+  pages: "123366"
+  year: 2025
+  doi: ""
+  pdf: ""
+  code: ""
+  preprint: ""
+  highlighted: true
+
+- title: "Microbial Metabolic Enzymes, Pathways and Microbial Hosts for Co-Metabolic Degradation of Organic Micropollutants in Wastewater"
+  authors: "Boyu Lyu, <strong>Bharat Manna</strong>, Xueyang Zhou, Ivanhoe K. H. Leung, Naresh Singhal"
+  journal: "Water Research"
+  volume: "276"
+  pages: "123229"
+  year: 2025
+  doi: ""
+  pdf: ""
+  code: ""
+  preprint: ""
+  highlighted: false
+
+- title: "Resource Recovery from Wastewater By Directing Microbial Metabolism Toward Production of Value-added Biochemicals"
+  authors: "Xueyang Zhou, <strong>Bharat Manna</strong>, Boyu Lyu, Gavin Lear, Joanne M. Kingsbury, Naresh Singhal"
+  journal: "Bioresource Technology"
+  volume: "419"
+  pages: "132061"
+  year: 2025
+  doi: ""
+  pdf: ""
+  code: ""
+  preprint: ""
+  highlighted: false
+
+- title: "Advancing Green and Sustainable Approaches: Investigating the Impact of Carbohydrates on Silica-Filled Natural Rubber Composites"
+  authors: "Abhijit Bera, <strong>Bharat Manna</strong>, Amit Ghosh, Samik Nanda, Santanu Chattopadhyay"
+  journal: "Journal of Polymer Science"
+  volume: "63(6)"
+  pages: "1–13"
+  year: 2025
+  doi: ""
+  pdf: ""
+  code: ""
+  preprint: ""
+  highlighted: false
+
+- title: "Short-Term Warming Induces Cyanobacterial Blooms and Antibiotic Resistance in a Freshwater Lake as Revealed by Metagenomics Analysis"
+  authors: "<strong>Bharat Manna</strong>, Emma Jay, Wensi Zhang, Xueyang Zhou, Boyu Lyu, Gevargis Muramthookil Thomas, Naresh Singhal"
+  journal: "Water"
+  volume: "16"
+  pages: "2655"
   year: 2024
   doi: ""
   pdf: ""
   code: ""
   preprint: ""
   highlighted: true
+
+- title: "Sorption of PFOS onto polystyrene microplastics potentiates synergistic toxic effects during zebrafish embryogenesis and neurodevelopment"
+  authors: "Priya Gupta, Archisman Mahapatra, <strong>Bharat Manna</strong>, Anjali Sumana, Shubhendu Shekhar Raya, Naresh Singhal, Rahul Kumar Singha"
+  journal: "Chemosphere"
+  volume: "366"
+  pages: "143462"
+  year: 2024
+  doi: ""
+  pdf: ""
+  code: ""
+  preprint: ""
+  highlighted: false
+
+- title: "Rational engineering of a β-glucosidase (H0HC94) from glycosyl hydrolase family I (GH1) to improve catalytic performance on cellobiose"
+  authors: "Sauratej Sengupta*, Pinaki Chanda*, <strong>Bharat Manna</strong>*, Amit Ghosh, Supratim Datta"
+  journal: "Journal of Physical Chemistry B"
+  volume: "128(36)"
+  pages: "8628–8640"
+  year: 2024
+  doi: ""
+  pdf: ""
+  code: ""
+  preprint: ""
+  highlighted: true
+
+- title: "Docking assisted mechanistic elucidation of bio conversion of hexavalent chromium by Serratia marcescens AJRR-22 that is effective yet long term sustainable in bio-geosphere"
+  authors: "Amrita Jasu, <strong>Bharat Manna</strong>, Samir Chandra Das, Buddhadeb Chakraborty, Goutam Pramanik, Rina Rani Ray"
+  journal: "Bioresource Technology"
+  volume: "393"
+  pages: "130009"
+  year: 2024
+  doi: ""
+  pdf: ""
+  code: ""
+  preprint: ""
+  highlighted: false
+
+- title: "Elucidating the Ionic Liquid Induced Mixed Inhibition of GH1 β-glucosidase H0HC94"
+  authors: "<strong>Bharat Manna</strong>*, Pinaki Chanda*, Supratim Datta, Amit Ghosh"
+  journal: "Journal of Physical Chemistry B"
+  volume: "127(39)"
+  pages: "8406–8416"
+  year: 2023
+  doi: ""
+  pdf: ""
+  code: ""
+  preprint: ""
+  highlighted: true
+
+- title: "Molecular insights into dissolution of lignin bunch in ionic liquid-water mixture for enhanced biomass conversion"
+  authors: "Rokesh Radhakrishnan*, <strong>Bharat Manna</strong>*, Amit Ghosh"
+  journal: "Renewable Energy"
+  volume: "206"
+  pages: "47–59"
+  year: 2023
+  doi: ""
+  pdf: ""
+  code: ""
+  preprint: ""
+  highlighted: true
+
+- title: "Pre-treatment of Hevea latex by sorbitol: improving the efficacy of silica dispersion by biomimetic approach"
+  authors: "Abhijit Bera, <strong>Bharat Manna</strong>, Debabrata Ganguly, S. K. P. Amarnath, Samik Nanda, Amit Ghosh, Santanu Chattopadhyay"
+  journal: "ACS Applied Polymer Materials"
+  volume: "5(1)"
+  pages: "441–451"
+  year: 2023
+  doi: ""
+  pdf: ""
+  code: ""
+  preprint: ""
+  highlighted: false
+
+- title: "In-silico screening and in-vitro assay show the antiviral effect of Indomethacin against SARS-CoV-2"
+  authors: "Rajkumar Chakraborty*, Gourab Bhattacharje*, Joydeep Baral*, <strong>Bharat Manna</strong>*, Jayati Mullick, Basavaraj S Mathapati, Priya Abraham, Madhumathi J, Yasha Hasija, Amit Ghosh, Amit Kumar Das"
+  journal: "Computers in Biology and Medicine"
+  volume: "147"
+  pages: "105788"
+  year: 2022
+  doi: ""
+  pdf: ""
+  code: ""
+  preprint: ""
+  highlighted: true
+
+- title: "Solvent Induced Conformational Changes for the Altered Activity of Laccase: A Molecular Dynamics Study"
+  authors: "Rokesh Radhakrishnan, <strong>Bharat Manna</strong>, Amit Ghosh"
+  journal: "Journal of Hazardous Materials"
+  volume: "423"
+  pages: "127123"
+  year: 2022
+  doi: ""
+  pdf: ""
+  code: ""
+  preprint: ""
+  highlighted: false
+
+- title: "Thin films of functionalized carbon nanotubes support long-term maintenance and cardio-neuronal differentiation of canine induced pluripotent stem cells"
+  authors: "Tanmay Mondal, Kinsuk Das, Purnima Singh, Mahalakshmi Natarajan, <strong>Bharat Manna</strong>, Amit Ghosh, Praveen Singh, S.K. Saha, Kuldeep Dhama, Triveni Dutt, Sadhan Bag"
+  journal: "Nanomedicine: Nanotechnology, Biology and Medicine"
+  volume: "40"
+  pages: "102487"
+  year: 2021
+  doi: ""
+  pdf: ""
+  code: ""
+  preprint: ""
+  highlighted: false
+
+- title: "Role of conformational change and glucose binding sites in the enhanced glucose tolerance of Agrobacterium tumefaciens 5A GH1 β-glucosidase mutants"
+  authors: "Shubhasish Goswami, <strong>Bharat Manna</strong>, Krishnananda Chattopadhyay, Amit Ghosh, Supratim Datta"
+  journal: "Journal of Physical Chemistry B"
+  volume: "125(33)"
+  pages: "9402–9416"
+  year: 2021
+  doi: ""
+  pdf: ""
+  code: ""
+  preprint: ""
+  highlighted: false
+
+- title: "Understanding the Dissolution of Softwood Lignin in Ionic Liquid and Water Mixed Solvents"
+  authors: "<strong>Bharat Manna</strong>, Supratim Datta, Amit Ghosh"
+  journal: "International Journal of Biological Macromolecules"
+  volume: "182"
+  pages: "402–412"
+  year: 2021
+  doi: ""
+  pdf: ""
+  code: ""
+  preprint: ""
+  highlighted: true
+
+- title: "Understanding the conformational change and inhibition of hyperthermophilic GH10 xylanase in ionic liquid"
+  authors: "<strong>Bharat Manna</strong>, Amit Ghosh"
+  journal: "Journal of Molecular Liquids"
+  volume: "332"
+  pages: "115875"
+  year: 2021
+  doi: ""
+  pdf: ""
+  code: ""
+  preprint: ""
+  highlighted: true
+
+- title: "Molecular Insight into glucose induced conformational change to investigate uncompetitive inhibition of GH1 β-glucosidase"
+  authors: "<strong>Bharat Manna</strong>, Amit Ghosh"
+  journal: "ACS Sustainable Chemistry & Engineering"
+  volume: "9(4)"
+  pages: "1613–1624"
+  year: 2021
+  doi: ""
+  pdf: ""
+  code: ""
+  preprint: ""
+  highlighted: true
+
+- title: "An allosteric hot spot in the tandem-SH2 domain of ZAP-70 regulates T-cell signaling"
+  authors: "Kaustav Gangopadhyay*, <strong>Bharat Manna</strong>*, Swarnendu Roy, Sunitha Kumari, Olivia Debnath, Subhankar Chowdhury, Amit Ghosh, Rahul Das"
+  journal: "Biochemical Journal"
+  volume: "477(7)"
+  pages: "1287–1308"
+  year: 2020
+  doi: ""
+  pdf: ""
+  code: ""
+  preprint: ""
+  highlighted: true
+
+- title: "Structure and dynamics of ionic liquid tolerant hyperthermophilic endoglucanase Cel12A from Rhodothermus marinus"
+  authors: "<strong>Bharat Manna</strong>, Amit Ghosh"
+  journal: "RSC Advances"
+  volume: "10(13)"
+  pages: "7933–7947"
+  year: 2020
+  doi: ""
+  pdf: ""
+  code: ""
+  preprint: ""
+  highlighted: true
+
+- title: "Species-wide metabolic interaction network for understanding natural lignocellulose digestion in termite gut microbiota"
+  authors: "Pritam Kundu, <strong>Bharat Manna</strong>, Subham Majumder, Amit Ghosh"
+  journal: "Scientific Reports"
+  volume: "9(1)"
+  pages: "1–13"
+  year: 2019
+  doi: ""
+  pdf: ""
+  code: ""
+  preprint: ""
+  highlighted: false
+
+- title: "Dynamic Studies on Intrinsically Disordered Regions of Two Paralogous Transcription Factors Reveal Rigid Segments with Important Biological Functions"
+  authors: "Snigdha Maiti, Bidisha Acharya, Veda Sheersh Boorla, <strong>Bharat Manna</strong>, Amit Ghosh, Soumya De"
+  journal: "Journal of Molecular Biology"
+  volume: "431(7)"
+  pages: "1353–1369"
+  year: 2019
+  doi: ""
+  pdf: ""
+  code: ""
+  preprint: ""
+  highlighted: false
+
+- title: "Dissolution of cellulose in ionic liquid and water mixtures as revealed by molecular dynamics simulations"
+  authors: "<strong>Bharat Manna</strong>, Amit Ghosh"
+  journal: "Journal of Biomolecular Structure and Dynamics"
+  volume: "37(15)"
+  pages: "3987–4005"
+  year: 2019
+  doi: ""
+  pdf: ""
+  code: ""
+  preprint: ""
+  highlighted: true
+
+- title: "Single-molecule force-unfolding of titin I27 reveals a correlation between the size of the surrounding anions and its mechanical stability"
+  authors: "Mohd Muddassir, <strong>Bharat Manna</strong>, Priyanka Singh, Surjeet Singh, Rajesh Kumar, Amit Ghosh, Deepak Sharma"
+  journal: "Chemical Communications"
+  volume: "54(69)"
+  pages: "9635–9638"
+  year: 2018
+  doi: ""
+  pdf: ""
+  code: ""
+  preprint: ""
+  highlighted: false
