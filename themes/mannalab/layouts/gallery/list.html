@@ -23,7 +23,7 @@
     {{ range $i, $cat := $cats }}
     <div id="{{ $cat.id }}" class="gal-section{{ if ne $i 0 }} gal-hidden{{ end }}">
       <div class="eyebrow">{{ $cat.category }}</div>
-      {{ if and $cat.photos (gt (len $cat.photos) 0) }}
+      {{ if $cat.photos }}
         <div class="gal-grid">
           {{ range $j, $photo := $cat.photos }}
           <div class="gal-item" data-index="{{ $j }}" data-cat="{{ $cat.id }}">
