@@ -1,0 +1,129 @@
+{{ define "main" }}
+
+{{/* ── HERO ─────────────────────────────────────────────── */}}
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+
+      <div class="hero-photo">
+        {{ if .Site.Params.photo }}
+          <img src="{{ .Site.Params.photo | relURL }}" alt="{{ .Site.Params.pi_name }}">
+        {{ else }}
+          <div class="hero-photo-ph">
+            <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+            <span>Photo</span>
+          </div>
+        {{ end }}
+      </div>
+
+      <div>
+        <div class="hero-badge">Computational Biology Lab &middot; VIT Vellore</div>
+        <h1 class="hero-name">{{ .Site.Params.pi_name }}</h1>
+        <p class="hero-role">
+          {{ .Site.Params.pi_title }} &middot;
+          <strong>{{ .Site.Params.department }}</strong>
+        </p>
+        <p class="hero-tagline">{{ .Site.Params.tagline }}</p>
+        <div class="hero-links">
+          {{ with .Site.Params.email }}
+          <a href="mailto:{{ . }}" class="hero-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,12 2,6"/>
+            </svg>
+            Email
+          </a>
+          {{ end }}
+          {{ with .Site.Params.google_scholar }}
+          <a href="{{ . }}" class="hero-link" target="_blank" rel="noopener">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/>
+            </svg>
+            Scholar
+          </a>
+          {{ end }}
+          {{ with .Site.Params.orcid }}
+          <a href="{{ . }}" class="hero-link" target="_blank" rel="noopener">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-1.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 3.969-2.484 3.969-3.722 0-2.016-1.284-3.722-3.9-3.722h-2.366z"/>
+            </svg>
+            ORCID
+          </a>
+          {{ end }}
+          {{ with .Site.Params.researchgate }}
+          <a href="{{ . }}" class="hero-link" target="_blank" rel="noopener">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19.586 0c-.818 0-1.508.19-2.073.565-.563.377-.97.936-1.213 1.68a12.918 12.918 0 0 0-.44 2.772c-.083.525-.19.98-.38 1.372-.19.39-.466.67-.83.838-.364.169-.764.254-1.18.254H13c-.38 0-.786-.067-1.22-.204a3.124 3.124 0 0 1-1.203-.653c-.366-.3-.664-.686-.89-1.157C9.46 3.577 9.344 3.02 9.344 2.373c0-.46.087-.877.26-1.252.173-.374.42-.678.754-.856A1.52 1.52 0 0 1 11.072 0h8.514zm-7.402 9.3c1.145 0 2.07.238 2.774.714.704.476 1.055 1.16 1.055 2.052 0 .571-.163 1.07-.49 1.497-.326.427-.784.73-1.374.908v.04c.714.163 1.263.484 1.648.963.385.48.578 1.064.578 1.752 0 1.036-.38 1.844-1.14 2.424-.76.58-1.795.87-3.107.87H8.2V9.3h3.984zm-.26 4.695h-1.39v3.4h1.39c.656 0 1.168-.146 1.535-.438.368-.292.552-.716.552-1.27 0-.53-.178-.941-.535-1.233-.357-.292-.857-.46-1.553-.46zm-.207-3.52H9.35v3.017h1.367c.617 0 1.097-.14 1.44-.42.344-.28.515-.672.515-1.178 0-.48-.166-.845-.499-1.097-.332-.252-.793-.322-1.456-.322z"/>
+            </svg>
+            ResearchGate
+          </a>
+          {{ end }}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{{/* ── RESEARCH HIGHLIGHTS ───────────────────────────────── */}}
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-eyebrow"></div>
+    <h2 class="section-title">Research Areas</h2>
+    <p class="section-sub">We combine computation with biology to understand how cells adapt, fail, and evolve.</p>
+    <div class="card-grid">
+      {{ range $i, $r := hugo.Data.research }}
+        {{ $colors := slice "rc-teal" "rc-navy" "rc-amber" "rc-purple" }}
+        {{ $c := index $colors (mod $i 4) }}
+        <div class="card {{ $c }}">
+          <div class="card-icon">{{ $r.icon | safeHTML }}</div>
+          <div class="card-title">{{ $r.title }}</div>
+          <p class="card-text">{{ $r.summary }}</p>
+        </div>
+      {{ end }}
+    </div>
+    <div style="margin-top:2rem;text-align:right">
+      <a href="{{ "/research/" | relURL }}" class="btn btn-primary">All research &rarr;</a>
+    </div>
+  </div>
+</section>
+
+{{/* ── RECENT NEWS ───────────────────────────────────────── */}}
+{{ $news := where .Site.RegularPages "Section" "news" | first 3 }}
+{{ if $news }}
+<section class="section">
+  <div class="container">
+    <div class="section-eyebrow"></div>
+    <h2 class="section-title">Recent News</h2>
+    <p class="section-sub">Updates from the lab.</p>
+    <div class="news-grid">
+      {{ range $news }}
+      <div class="news-card">
+        <div class="news-date">{{ .Date.Format "2 Jan 2006" }}</div>
+        <div class="news-title">{{ .Title }}</div>
+        <div class="news-excerpt">{{ .Summary | truncate 130 "…" }}</div>
+        <a href="{{ .RelPermalink }}" class="news-more">Read more &rarr;</a>
+      </div>
+      {{ end }}
+    </div>
+    <div style="margin-top:1.75rem;text-align:right">
+      <a href="{{ "/news/" | relURL }}">All news &rarr;</a>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{/* ── JOIN CTA ──────────────────────────────────────────── */}}
+<div class="cta-band">
+  <div class="container">
+    <h2>Join the Lab</h2>
+    <p>We are recruiting PhD students and project interns. Curiosity and rigour matter more than prior expertise.</p>
+    <a href="{{ "/join/" | relURL }}" class="btn btn-primary">Open Positions</a>
+    <a href="{{ "/contact/" | relURL }}" class="btn btn-outline">Contact</a>
+  </div>
+</div>
+
+{{ end }}

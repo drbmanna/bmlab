@@ -1,0 +1,8 @@
+{{ define "main" }}
+<div class="post-wrap">
+  <a href="{{ .Section | relURL }}" class="post-back">&larr; All {{ .Section | title }}</a>
+  <h1 class="post-title">{{ .Title }}</h1>
+  <div class="post-meta">{{ .Date.Format "2 January 2006" }}</div>
+  <div class="post-body">{{ .Content }}</div>
+</div>
+{{ end }}

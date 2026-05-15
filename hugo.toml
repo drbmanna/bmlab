@@ -1,0 +1,56 @@
+baseURL = "https://drbmanna.github.io/bmlab/"
+title = "BM Lab"
+theme = "mannalab"
+locale = "en-us"
+paginate = 10
+enableRobotsTXT = true
+disableKinds = ["taxonomy", "term"]
+
+[params]
+  pi_name        = "Dr. Bharat Manna"
+  pi_title       = "Assistant Professor"
+  department     = "School of Biosciences and Technology"
+  affiliation    = "VIT Vellore"
+  email          = "bharat.manna@vit.ac.in"
+  tagline        = "We study how microorganisms sense and respond to stress — combining molecular dynamics, comparative genomics, and multi-omics to link molecular mechanisms to evolutionary outcomes."
+  google_scholar = ""   # paste full URL
+  orcid          = ""   # paste full URL, e.g. https://orcid.org/0000-...
+  researchgate   = ""   # paste full URL
+  twitter        = ""   # paste full URL
+  photo          = ""   # e.g. /img/bharat.jpg  (place file in static/img/)
+  description    = "Computational biology lab at VIT Vellore studying oxidative stress, antimicrobial resistance evolution, multi-omics integration, and molecular dynamics simulations."
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[menu]
+  [[menu.main]]
+    name   = "Home"
+    url    = "/"
+    weight = 1
+  [[menu.main]]
+    name   = "Research"
+    url    = "/research/"
+    weight = 2
+  [[menu.main]]
+    name   = "Publications"
+    url    = "/publications/"
+    weight = 3
+  [[menu.main]]
+    name   = "Team"
+    url    = "/team/"
+    weight = 4
+  [[menu.main]]
+    name   = "News"
+    url    = "/news/"
+    weight = 5
+  [[menu.main]]
+    name   = "Join Us"
+    url    = "/join/"
+    weight = 6
+  [[menu.main]]
+    name   = "Contact"
+    url    = "/contact/"
+    weight = 7

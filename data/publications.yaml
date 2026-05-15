@@ -1,0 +1,15 @@
+# Add your papers here. Each entry renders automatically on /publications/
+# To bold your name in the authors field use: "<strong>Manna B</strong>, ..."
+# Fields: title, authors, journal, year, doi, pdf, code, preprint, highlighted
+
+- title: "Your paper title goes here"
+  authors: "<strong>Manna B</strong>, Collaborator A, Collaborator B"
+  journal: "Journal of Computational Biology"
+  volume: ""
+  pages: ""
+  year: 2024
+  doi: ""
+  pdf: ""
+  code: ""
+  preprint: ""
+  highlighted: true

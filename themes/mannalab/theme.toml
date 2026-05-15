@@ -1,0 +1,4 @@
+name = "Manna Lab"
+license = "MIT"
+description = "Custom academic theme for Manna Lab"
+min_version = "0.110.0"
