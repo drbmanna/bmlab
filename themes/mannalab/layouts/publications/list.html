@@ -4,49 +4,152 @@
     <h1>Publications</h1>
   </div>
 </div>
+
+{{/* ── TAB NAV ───────────────────────────────────────────── */}}
+<div class="pub-tabnav">
+  <div class="container">
+    <a href="#journals"      class="pub-tab active" data-section="journals">Journals</a>
+    <a href="#conferences"   class="pub-tab"        data-section="conferences">Conferences</a>
+    <a href="#book-chapters" class="pub-tab"        data-section="book-chapters">Book Chapters</a>
+  </div>
+</div>
+
 <section class="section">
   <div class="container">
 
-    {{ $pubs := hugo.Data.publications }}
-    {{ if $pubs }}
+    {{/* ── JOURNALS ─────────────────────────────────────── */}}
+    <div id="journals" class="pub-section">
+      <div class="pub-section-head">
+        <div class="eyebrow">Peer-Reviewed</div>
+        <h2 class="section-title">Journal Articles</h2>
+      </div>
 
-      {{/* sort descending by year, then group with year-change detection */}}
-      {{ $sorted := sort $pubs "year" "desc" }}
-      {{ $curYear := 0 }}
-
-      {{ range $sorted }}
-        {{ if ne .year $curYear }}
-          {{ if ne $curYear 0 }}</div></div>{{ end }}
-          <div class="pub-year-block">
-          <div class="pub-year-label">{{ .year }}</div>
-          <div class="pub-list">
-          {{ $curYear = .year }}
-        {{ end }}
-
-        <div class="pub-item{{ if .highlighted }} highlighted{{ end }}">
-          <div>
-            <div class="pub-title">{{ .title }}</div>
-            <div class="pub-authors">{{ .authors | safeHTML }}</div>
-            <div class="pub-journal">
-              {{ .journal }}{{ with .volume }}, <strong>{{ . }}</strong>{{ end }}{{ with .pages }}, {{ . }}{{ end }}
+      {{ $pubs := hugo.Data.publications }}
+      {{ if $pubs }}
+        {{ $sorted := sort $pubs "year" "desc" }}
+        {{ $curYear := 0 }}
+        {{ range $sorted }}
+          {{ if ne .year $curYear }}
+            {{ if ne $curYear 0 }}</div></div>{{ end }}
+            <div class="pub-year-block">
+            <div class="pub-year-label">{{ .year }}</div>
+            <div class="pub-list">
+            {{ $curYear = .year }}
+          {{ end }}
+          <div class="pub-item{{ if .highlighted }} highlighted{{ end }}">
+            <div>
+              <div class="pub-title">{{ .title }}</div>
+              <div class="pub-authors">{{ .authors | safeHTML }}</div>
+              <div class="pub-journal">
+                {{ .journal }}{{ with .volume }}, <strong>{{ . }}</strong>{{ end }}{{ with .pages }}, {{ . }}{{ end }}
+              </div>
+              <div class="pub-badges">
+                {{ with .doi }}<a href="{{ . }}" class="pub-badge" target="_blank" rel="noopener">DOI</a>{{ end }}
+                {{ with .pdf }}<a href="{{ . }}" class="pub-badge" target="_blank" rel="noopener">PDF</a>{{ end }}
+                {{ with .code }}<a href="{{ . }}" class="pub-badge" target="_blank" rel="noopener">Code</a>{{ end }}
+                {{ with .preprint }}<a href="{{ . }}" class="pub-badge" target="_blank" rel="noopener">Preprint</a>{{ end }}
+              </div>
             </div>
-            <div class="pub-badges">
-              {{ with .doi }}<a href="{{ . }}" class="pub-badge" target="_blank" rel="noopener">DOI</a>{{ end }}
-              {{ with .pdf }}<a href="{{ . }}" class="pub-badge" target="_blank" rel="noopener">PDF</a>{{ end }}
-              {{ with .code }}<a href="{{ . }}" class="pub-badge" target="_blank" rel="noopener">Code</a>{{ end }}
-              {{ with .preprint }}<a href="{{ . }}" class="pub-badge" target="_blank" rel="noopener">Preprint</a>{{ end }}
-            </div>
+            <div class="pub-year-tag">{{ .year }}</div>
           </div>
-          <div class="pub-year-tag">{{ .year }}</div>
-        </div>
-
+        {{ end }}
+        {{ if ne $curYear 0 }}</div></div>{{ end }}
       {{ end }}
-      {{ if ne $curYear 0 }}</div></div>{{ end }}
+    </div>
 
-    {{ else }}
-      <p style="color:var(--gray-400)">Publications will appear here once added to <code>data/publications.yaml</code>.</p>
-    {{ end }}
+    {{/* ── CONFERENCES ──────────────────────────────────── */}}
+    <div id="conferences" class="pub-section" style="margin-top:4rem">
+      <div class="pub-section-head">
+        <div class="eyebrow">Presentations</div>
+        <h2 class="section-title">Conferences</h2>
+      </div>
+
+      {{ $conf := hugo.Data.conferences }}
+      {{ if $conf }}
+        {{ $csorted := sort $conf "year" "desc" }}
+        {{ $cYear := 0 }}
+        {{ range $csorted }}
+          {{ if ne .year $cYear }}
+            {{ if ne $cYear 0 }}</div></div>{{ end }}
+            <div class="pub-year-block">
+            <div class="pub-year-label">{{ .year }}</div>
+            <div class="pub-list">
+            {{ $cYear = .year }}
+          {{ end }}
+          <div class="pub-item highlighted">
+            <div>
+              <div class="pub-title">{{ .title }}</div>
+              <div class="pub-authors">{{ .authors | safeHTML }}</div>
+              <div class="pub-journal">{{ .event }}</div>
+              <div class="pub-badges">
+                <span class="pub-badge" style="cursor:default">{{ .location }}</span>
+              </div>
+            </div>
+            <div class="pub-year-tag">{{ .year }}</div>
+          </div>
+        {{ end }}
+        {{ if ne $cYear 0 }}</div></div>{{ end }}
+      {{ end }}
+    </div>
+
+    {{/* ── BOOK CHAPTERS ────────────────────────────────── */}}
+    <div id="book-chapters" class="pub-section" style="margin-top:4rem">
+      <div class="pub-section-head">
+        <div class="eyebrow">Books</div>
+        <h2 class="section-title">Book Chapters</h2>
+      </div>
+
+      {{ $chapters := hugo.Data.book_chapters }}
+      {{ if $chapters }}
+        <div class="pub-list">
+        {{ range $chapters }}
+          <div class="pub-item highlighted">
+            <div>
+              <div class="pub-title">{{ .title }}</div>
+              <div class="pub-authors">{{ .authors | safeHTML }}</div>
+              <div class="pub-journal">In: <em>{{ .book }}</em>. {{ .publisher }}, pp. {{ .pages }}</div>
+              <div class="pub-badges">
+                {{ with .doi }}<a href="{{ . }}" class="pub-badge" target="_blank" rel="noopener">DOI</a>{{ end }}
+              </div>
+            </div>
+            <div class="pub-year-tag">{{ .year }}</div>
+          </div>
+        {{ end }}
+        </div>
+      {{ end }}
+    </div>
 
   </div>
 </section>
+
+{{/* ── TAB NAV JS ────────────────────────────────────────── */}}
+<script>
+(function () {
+  const tabs = document.querySelectorAll('.pub-tab');
+  const sections = document.querySelectorAll('.pub-section');
+
+  function setActive(id) {
+    tabs.forEach(t => t.classList.toggle('active', t.dataset.section === id));
+  }
+
+  tabs.forEach(t => t.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.getElementById(this.dataset.section);
+    if (target) {
+      const offset = document.querySelector('.pub-tabnav').offsetHeight + 8;
+      window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
+      setActive(this.dataset.section);
+    }
+  }));
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) setActive(entry.target.id);
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+
+  sections.forEach(s => observer.observe(s));
+})();
+</script>
+
 {{ end }}

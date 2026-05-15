@@ -295,6 +295,37 @@ ul    { list-style: none; }
 }
 .page-header p { color: rgba(255,255,255,0.55); font-size: 0.95rem; }
 
+/* --- Publications Tab Nav --- */
+.pub-tabnav {
+  position: sticky;
+  top: 60px;
+  z-index: 100;
+  background: var(--white);
+  border-bottom: 1px solid var(--warm-200);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.pub-tabnav .container {
+  display: flex;
+  gap: 0;
+}
+.pub-tab {
+  display: inline-block;
+  padding: 0.85rem 1.5rem;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--warm-600);
+  border-bottom: 2px solid transparent;
+  transition: all var(--transition);
+  letter-spacing: -0.01em;
+}
+.pub-tab:hover { color: var(--charcoal); }
+.pub-tab.active {
+  color: var(--terra);
+  border-bottom-color: var(--terra);
+}
+.pub-section-head { margin-bottom: 2rem; }
+
 /* --- Publications --- */
 .pub-year-block { margin-bottom: 2.75rem; }
 .pub-year-label {
