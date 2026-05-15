@@ -11,7 +11,7 @@
 
       <div>
         <div class="section-eyebrow"></div>
-        <h2 class="section-title">Direct Contact</h2>
+        <h2 class="section-title">Contact</h2>
 
         <div class="contact-item">
           <div class="contact-icon">
@@ -46,68 +46,12 @@
         </div>
       </div>
 
-      <div>
-        <div class="section-eyebrow"></div>
-        <h2 class="section-title">Online Profiles</h2>
-
-        {{ with .Site.Params.google_scholar }}
-        <div class="contact-item">
-          <div class="contact-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/>
-            </svg>
-          </div>
-          <div>
-            <div class="contact-label">Google Scholar</div>
-            <div class="contact-value"><a href="{{ . }}" target="_blank" rel="noopener">View profile &rarr;</a></div>
-          </div>
-        </div>
-        {{ end }}
-
-        {{ with .Site.Params.orcid }}
-        <div class="contact-item">
-          <div class="contact-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-1.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 3.969-2.484 3.969-3.722 0-2.016-1.284-3.722-3.9-3.722h-2.366z"/>
-            </svg>
-          </div>
-          <div>
-            <div class="contact-label">ORCID</div>
-            <div class="contact-value"><a href="{{ . }}" target="_blank" rel="noopener">{{ . }}</a></div>
-          </div>
-        </div>
-        {{ end }}
-
-        {{ with .Site.Params.researchgate }}
-        <div class="contact-item">
-          <div class="contact-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M19.586 0c-.818 0-1.508.19-2.073.565-.563.377-.97.936-1.213 1.68a12.918 12.918 0 0 0-.44 2.772c-.083.525-.19.98-.38 1.372-.19.39-.466.67-.83.838-.364.169-.764.254-1.18.254H13c-.38 0-.786-.067-1.22-.204a3.124 3.124 0 0 1-1.203-.653c-.366-.3-.664-.686-.89-1.157C9.46 3.577 9.344 3.02 9.344 2.373c0-.46.087-.877.26-1.252.173-.374.42-.678.754-.856A1.52 1.52 0 0 1 11.072 0h8.514zm-7.402 9.3c1.145 0 2.07.238 2.774.714.704.476 1.055 1.16 1.055 2.052 0 .571-.163 1.07-.49 1.497-.326.427-.784.73-1.374.908v.04c.714.163 1.263.484 1.648.963.385.48.578 1.064.578 1.752 0 1.036-.38 1.844-1.14 2.424-.76.58-1.795.87-3.107.87H8.2V9.3h3.984zm-.26 4.695h-1.39v3.4h1.39c.656 0 1.168-.146 1.535-.438.368-.292.552-.716.552-1.27 0-.53-.178-.941-.535-1.233-.357-.292-.857-.46-1.553-.46zm-.207-3.52H9.35v3.017h1.367c.617 0 1.097-.14 1.44-.42.344-.28.515-.672.515-1.178 0-.48-.166-.845-.499-1.097-.332-.252-.793-.322-1.456-.322z"/>
-            </svg>
-          </div>
-          <div>
-            <div class="contact-label">ResearchGate</div>
-            <div class="contact-value"><a href="{{ . }}" target="_blank" rel="noopener">View profile &rarr;</a></div>
-          </div>
-        </div>
-        {{ end }}
-
-        {{ with .Site.Params.twitter }}
-        <div class="contact-item">
-          <div class="contact-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-            </svg>
-          </div>
-          <div>
-            <div class="contact-label">X / Twitter</div>
-            <div class="contact-value">
-              <a href="{{ . }}" target="_blank" rel="noopener">@{{ . | replaceRE ".*/" "" }}</a>
-            </div>
-          </div>
-        </div>
-        {{ end }}
-
+      <div class="contact-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.9!2d79.1553!3d12.9692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad479f0ccbe067%3A0xd317c5342d5b5d3b!2sVIT%20University!5e0!3m2!1sen!2sin!4v1"
+          width="100%" height="360" style="border:0; border-radius:6px;"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
       </div>
     </div>
   </div>
