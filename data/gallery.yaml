@@ -1,0 +1,18 @@
+# Add photos here. Place image files in static/img/gallery/
+# Each category becomes a tab section.
+
+- category: "Lab Happy Hours"
+  id: "happy-hours"
+  photos: []
+
+- category: "Conferences"
+  id: "conferences"
+  photos: []
+
+- category: "Lab Life"
+  id: "lab-life"
+  photos: []
+
+- category: "Field Work"
+  id: "field-work"
+  photos: []
