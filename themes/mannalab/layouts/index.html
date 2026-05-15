@@ -118,52 +118,6 @@
   </div>
 </div>
 
-{{/* ── PI DETAILS ───────────────────────────────────────── */}}
-<section class="pi-section">
-  <div class="container">
-    <div class="pi-inner">
-      <div class="pi-photo">
-        {{ if .Site.Params.photo }}
-          <img src="{{ .Site.Params.photo | absURL }}" alt="{{ .Site.Params.pi_name }}">
-        {{ else }}
-          <div class="pi-photo-ph">
-            <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-              <circle cx="12" cy="7" r="4"/>
-            </svg>
-          </div>
-        {{ end }}
-      </div>
-      <div class="pi-info">
-        <div class="pi-badge">Principal Investigator &middot; {{ .Site.Params.affiliation }}</div>
-        <h1 class="pi-name">{{ .Site.Params.pi_name }}</h1>
-        <p class="pi-role">{{ .Site.Params.pi_title }} &middot; <strong>{{ .Site.Params.department }}</strong></p>
-        <p class="pi-tagline">{{ .Site.Params.tagline }}</p>
-        <div class="pi-links">
-          {{ with .Site.Params.email }}
-          <a href="mailto:{{ . }}" class="pi-link">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
-            Email
-          </a>
-          {{ end }}
-          {{ with .Site.Params.google_scholar }}
-          <a href="{{ . }}" class="pi-link" target="_blank" rel="noopener">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/></svg>
-            Scholar
-          </a>
-          {{ end }}
-          {{ with .Site.Params.orcid }}
-          <a href="{{ . }}" class="pi-link" target="_blank" rel="noopener">ORCID</a>
-          {{ end }}
-          {{ with .Site.Params.researchgate }}
-          <a href="{{ . }}" class="pi-link" target="_blank" rel="noopener">ResearchGate</a>
-          {{ end }}
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 {{/* ── RESEARCH HIGHLIGHTS ───────────────────────────────── */}}
 <section class="section section-alt">
   <div class="container">
