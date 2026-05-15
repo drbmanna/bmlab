@@ -1,11 +1,14 @@
 # role_type options: pi | phd | project | alumni
 
 - name: "Dr. Bharat Manna"
-  role: "Principal Investigator"
+  role: "Associate Professor (Research)"
   role_type: "pi"
-  bio: "Computational biologist working on oxidative stress, AMR evolution, and multi-omics integration. Assistant Professor, VIT Vellore."
-  photo: ""          # e.g. /img/team/bharat.jpg
+  department: "School of Biosciences and Technology"
+  location: "VIT Vellore, Tamil Nadu 632014, India"
+  bio: ""
+  photo: ""
   email: "bharat.manna@vit.ac.in"
-  scholar: ""
-  orcid: ""
-  researchgate: ""
+  vit_link: ""        # paste your VIT faculty profile URL
+  scholar: ""         # paste full Google Scholar URL
+  orcid: ""           # paste full ORCID URL
+  linkedin: ""        # paste full LinkedIn URL

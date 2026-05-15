@@ -14,7 +14,7 @@
     <h2 class="team-section-label">Principal Investigator</h2>
     <div class="team-grid">
       {{ range where $team "role_type" "pi" }}
-      <div class="team-card">
+      <div class="team-card pi-card">
         <div class="team-photo">
           {{ if .photo }}
             <img src="{{ .photo | relURL }}" alt="{{ .name }}">
@@ -28,11 +28,14 @@
         </div>
         <div class="team-name">{{ .name }}</div>
         <div class="team-role">{{ .role }}</div>
-        <div class="team-bio">{{ .bio }}</div>
+        {{ with .department }}<div class="team-dept">{{ . }}</div>{{ end }}
+        {{ with .location }}<div class="team-location">{{ . }}</div>{{ end }}
         <div class="team-links">
-          {{ with .email }}<a href="mailto:{{ . }}" class="team-link" title="Email">✉</a>{{ end }}
-          {{ with .scholar }}<a href="{{ . }}" class="team-link" target="_blank" rel="noopener" title="Google Scholar">GS</a>{{ end }}
-          {{ with .orcid }}<a href="{{ . }}" class="team-link" target="_blank" rel="noopener" title="ORCID">iD</a>{{ end }}
+          {{ with .email }}<a href="mailto:{{ . }}" class="team-link pi-link-btn">Email</a>{{ end }}
+          {{ with .vit_link }}<a href="{{ . }}" class="team-link pi-link-btn" target="_blank" rel="noopener">VIT</a>{{ end }}
+          {{ with .scholar }}<a href="{{ . }}" class="team-link pi-link-btn" target="_blank" rel="noopener">Scholar</a>{{ end }}
+          {{ with .orcid }}<a href="{{ . }}" class="team-link pi-link-btn" target="_blank" rel="noopener">ORCID</a>{{ end }}
+          {{ with .linkedin }}<a href="{{ . }}" class="team-link pi-link-btn" target="_blank" rel="noopener">LinkedIn</a>{{ end }}
         </div>
       </div>
       {{ end }}

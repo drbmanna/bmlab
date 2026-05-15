@@ -413,6 +413,30 @@ ul    { list-style: none; }
 .team-links { display: flex; justify-content: center; gap: 0.6rem; margin-top: 0.75rem; }
 .team-link  { color: var(--warm-400); font-size: 0.8rem; transition: color var(--transition); }
 .team-link:hover { color: var(--terra); }
+.team-dept {
+  font-size: 0.8rem; color: var(--warm-600);
+  margin-bottom: 0.15rem; line-height: 1.4;
+}
+.team-location {
+  font-size: 0.78rem; color: var(--warm-400);
+  margin-bottom: 0.6rem; line-height: 1.4;
+}
+.pi-link-btn {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  border: 1px solid var(--warm-200);
+  border-radius: 3px;
+  font-size: 0.75rem; font-weight: 500;
+  color: var(--warm-700) !important;
+  background: var(--white);
+  transition: all var(--transition);
+}
+.pi-link-btn:hover {
+  border-color: var(--terra);
+  color: var(--terra) !important;
+  background: var(--terra-pale);
+}
+.pi-card .team-links { flex-wrap: wrap; gap: 0.4rem; }
 .team-card.slot { border: 1.5px dashed var(--warm-200); background: var(--off-white); }
 .team-card.slot .team-photo { background: var(--warm-100); border-color: var(--warm-200); }
 .team-card.slot .team-photo-ph { color: var(--warm-200); }
