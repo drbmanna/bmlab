@@ -600,7 +600,7 @@ ul    { list-style: none; }
 /* --- Footer --- */
 .footer {
   background: var(--charcoal-2);
-  color: rgba(255,255,255,0.38);
+  color: rgba(255,255,255,0.60);
   padding: 2rem 0; font-size: 0.83rem;
 }
 .footer-inner {
