@@ -275,7 +275,7 @@ ul    { list-style: none; }
 .btn-primary { background: var(--terra); color: var(--white); }
 .btn-primary:hover { background: var(--terra-dark); color: var(--white); }
 .btn-outline {
-  border: 1.5px solid var(--warm-200);
+  border: 1.5px solid var(--charcoal);
   color: var(--charcoal);
   margin-left: 0.75rem; background: var(--white);
 }
