@@ -11,8 +11,8 @@
   --terra-dark: #5C0000;
 
   --charcoal:   #243142;
-  --charcoal-2: #1A0000;
-  --charcoal-3: #110000;
+  --charcoal-2: #800000;
+  --charcoal-3: #111827;
 
   --white:      #FFFFFF;
   --off-white:  #FFFFFF;
@@ -85,7 +85,7 @@ ul    { list-style: none; }
   color: var(--white) !important;
   letter-spacing: -0.01em;
 }
-.nav-brand span { color: var(--terra-mid); }
+.nav-brand span { color: rgba(255,255,255,0.7); }
 .nav-links { display: flex; align-items: center; gap: 2px; }
 .nav-links a {
   color: rgba(255,255,255,0.62);
@@ -128,7 +128,7 @@ ul    { list-style: none; }
 .hero::after {
   content: '';
   position: absolute; inset: 0;
-  background: radial-gradient(ellipse at 80% 50%, rgba(183,71,42,0.10) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 80% 50%, rgba(128,0,0,0.10) 0%, transparent 60%);
   pointer-events: none;
 }
 .hero-inner {
@@ -186,7 +186,7 @@ ul    { list-style: none; }
 .hero-link:hover {
   border-color: var(--terra);
   color: var(--white) !important;
-  background: rgba(183,71,42,0.12);
+  background: rgba(128,0,0,0.12);
 }
 
 /* --- Cards --- */
@@ -584,7 +584,7 @@ ul    { list-style: none; }
   display: flex; align-items: center; justify-content: center;
   cursor: pointer; transition: background var(--transition);
 }
-.lb-prev:hover, .lb-next:hover { background: rgba(183,71,42,0.6); }
+.lb-prev:hover, .lb-next:hover { background: rgba(128,0,0,0.6); }
 .lb-prev { left: 1.25rem; }
 .lb-next { right: 1.25rem; }
 
@@ -769,7 +769,7 @@ ul    { list-style: none; }
   transition: background var(--transition);
   z-index: 10;
 }
-.slide-arrow:hover { background: rgba(183,71,42,0.7); border-color: transparent; }
+.slide-arrow:hover { background: rgba(128,0,0,0.7); border-color: transparent; }
 .slide-prev { left: 1.25rem; }
 .slide-next { right: 1.25rem; }
 .slide-dots {
