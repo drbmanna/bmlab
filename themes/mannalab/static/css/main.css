@@ -85,7 +85,7 @@ ul    { list-style: none; }
   color: var(--white) !important;
   letter-spacing: -0.01em;
 }
-.nav-brand span { color: rgba(255,255,255,0.7); }
+.nav-brand span { color: var(--white); font-weight: 400; }
 .nav-links { display: flex; align-items: center; gap: 2px; }
 .nav-links a {
   color: rgba(255,255,255,0.62);
