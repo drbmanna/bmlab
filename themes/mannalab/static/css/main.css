@@ -1,26 +1,26 @@
 /* =============================================
    MANNA LAB — main.css
-   Palette: White · Terracotta · Charcoal
+   Palette: White · Crimson · Navy
    Fonts:   Space Grotesk (headings) · Inter (body)
    ============================================= */
 
 :root {
-  --terra:      #B7472A;
-  --terra-mid:  #C05746;
-  --terra-pale: #FDF0EC;
-  --terra-dark: #8C2E16;
+  --terra:      #800000;
+  --terra-mid:  #9A0000;
+  --terra-pale: #FFF0F0;
+  --terra-dark: #5C0000;
 
-  --charcoal:   #2D2D2D;
-  --charcoal-2: #1C1C1C;
-  --charcoal-3: #111111;
+  --charcoal:   #243142;
+  --charcoal-2: #1A0000;
+  --charcoal-3: #110000;
 
   --white:      #FFFFFF;
-  --off-white:  #F8F7F5;
-  --warm-100:   #F0EDE8;
-  --warm-200:   #E5E1DB;
-  --warm-400:   #B0A99F;
-  --warm-600:   #6B6460;
-  --warm-700:   #4A4440;
+  --off-white:  #FFFFFF;
+  --warm-100:   #F5F5F5;
+  --warm-200:   #E8E8E8;
+  --warm-400:   #8A9AB0;
+  --warm-600:   #4A5568;
+  --warm-700:   #2D3748;
 
   --font-heading: 'Playfair Display', Georgia, serif;
   --font-body:    'DM Sans', system-ui, -apple-system, sans-serif;
