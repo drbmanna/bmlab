@@ -13,8 +13,9 @@ disableKinds = ["taxonomy", "term"]
   affiliation    = "VIT Vellore"
   email          = "bharatmanna@gmail.com"
   tagline        = "We study how microorganisms sense and respond to stress — combining molecular dynamics, comparative genomics, and multi-omics to link molecular mechanisms to evolutionary outcomes."
-  google_scholar = ""   # paste full URL
-  orcid          = ""   # paste full URL, e.g. https://orcid.org/0000-...
+  google_scholar = "https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=X2-6aVoAAAAJ"
+  orcid          = "https://orcid.org/0000-0001-7394-8204"
+  linkedin       = "https://www.linkedin.com/in/drbmanna"
   researchgate   = ""   # paste full URL
   twitter        = ""   # paste full URL
   photo          = ""   # e.g. /img/bharat.jpg  (place file in static/img/)
