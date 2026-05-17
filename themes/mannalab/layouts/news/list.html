@@ -11,7 +11,7 @@
     <div class="news-grid">
       {{ range .Pages }}
       <div class="news-card">
-        <div class="news-date">{{ .Date.Format "2 Jan 2006" }}</div>
+        <div class="news-date">{{ if .Params.display_date }}{{ .Params.display_date }}{{ else }}{{ .Date.Format "2 Jan 2006" }}{{ end }}</div>
         <div class="news-title">{{ .Title }}</div>
         <div class="news-excerpt">{{ .Summary | truncate 160 "…" }}</div>
         <a href="{{ .RelPermalink }}" class="news-more">Read more &rarr;</a>
