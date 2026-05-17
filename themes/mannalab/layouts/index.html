@@ -7,15 +7,15 @@
     {{ if (fileExists "static/img/slides/slide1.jpg") }}
       <img class="slide-img" src="{{ "img/slides/slide1.jpg" | absURL }}" alt="Research environment">
     {{ else }}
-      <div class="slide-ph" style="background:linear-gradient(135deg,#111 0%,#1e1e1e 60%,#2a1a0e 100%)">
+      <div class="slide-ph" style="background:linear-gradient(135deg,#111827 0%,#1c1f2e 60%,#111827 100%)">
         <svg class="slide-bg-pattern" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <circle cx="600" cy="100" r="180" fill="none" stroke="rgba(183,71,42,0.12)" stroke-width="60"/>
-          <circle cx="600" cy="100" r="100" fill="none" stroke="rgba(183,71,42,0.10)" stroke-width="2"/>
-          <circle cx="150" cy="380" r="120" fill="none" stroke="rgba(183,71,42,0.08)" stroke-width="40"/>
-          <line x1="150" y1="380" x2="600" y2="100" stroke="rgba(183,71,42,0.06)" stroke-width="1"/>
-          <circle cx="400" cy="250" r="4" fill="rgba(183,71,42,0.4)"/>
-          <circle cx="600" cy="100" r="4" fill="rgba(183,71,42,0.4)"/>
-          <circle cx="150" cy="380" r="4" fill="rgba(183,71,42,0.4)"/>
+          <circle cx="600" cy="100" r="180" fill="none" stroke="rgba(128,0,0,0.12)" stroke-width="60"/>
+          <circle cx="600" cy="100" r="100" fill="none" stroke="rgba(128,0,0,0.10)" stroke-width="2"/>
+          <circle cx="150" cy="380" r="120" fill="none" stroke="rgba(128,0,0,0.08)" stroke-width="40"/>
+          <line x1="150" y1="380" x2="600" y2="100" stroke="rgba(128,0,0,0.06)" stroke-width="1"/>
+          <circle cx="400" cy="250" r="4" fill="rgba(128,0,0,0.4)"/>
+          <circle cx="600" cy="100" r="4" fill="rgba(128,0,0,0.4)"/>
+          <circle cx="150" cy="380" r="4" fill="rgba(128,0,0,0.4)"/>
         </svg>
       </div>
     {{ end }}
@@ -29,7 +29,7 @@
     {{ if (fileExists "static/img/slides/slide2.jpg") }}
       <img class="slide-img" src="{{ "img/slides/slide2.jpg" | absURL }}" alt="Molecular visualization">
     {{ else }}
-      <div class="slide-ph" style="background:linear-gradient(135deg,#0d1f17 0%,#1b3a2a 60%,#0d2b1e 100%)">
+      <div class="slide-ph" style="background:linear-gradient(135deg,#111827 0%,#1c1f2e 60%,#111827 100%)">
         <svg class="slide-bg-pattern" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <circle cx="200" cy="250" r="60" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="2"/>
           <circle cx="400" cy="150" r="40" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="2"/>
@@ -39,10 +39,10 @@
           <line x1="400" y1="150" x2="600" y2="300" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
           <line x1="200" y1="250" x2="350" y2="350" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
           <line x1="600" y1="300" x2="350" y2="350" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-          <circle cx="200" cy="250" r="6" fill="rgba(183,71,42,0.6)"/>
-          <circle cx="400" cy="150" r="6" fill="rgba(183,71,42,0.6)"/>
-          <circle cx="600" cy="300" r="6" fill="rgba(183,71,42,0.6)"/>
-          <circle cx="350" cy="350" r="6" fill="rgba(183,71,42,0.6)"/>
+          <circle cx="200" cy="250" r="6" fill="rgba(128,0,0,0.6)"/>
+          <circle cx="400" cy="150" r="6" fill="rgba(128,0,0,0.6)"/>
+          <circle cx="600" cy="300" r="6" fill="rgba(128,0,0,0.6)"/>
+          <circle cx="350" cy="350" r="6" fill="rgba(128,0,0,0.6)"/>
         </svg>
       </div>
     {{ end }}
@@ -56,7 +56,7 @@
     {{ if (fileExists "static/img/slides/slide3.jpg") }}
       <img class="slide-img" src="{{ "img/slides/slide3.jpg" | absURL }}" alt="Genomics pipeline">
     {{ else }}
-      <div class="slide-ph" style="background:linear-gradient(135deg,#1a1200 0%,#2a1e00 60%,#1a1000 100%)">
+      <div class="slide-ph" style="background:linear-gradient(135deg,#111827 0%,#1c1f2e 60%,#111827 100%)">
         <svg class="slide-bg-pattern" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           {{ range $i := seq 0 15 }}
           <rect x="{{ mul $i 52 }}" y="0" width="1" height="500" fill="rgba(200,146,10,0.05)"/>
@@ -85,13 +85,13 @@
     {{ else }}
       <div class="slide-ph" style="background:linear-gradient(135deg,#0e1520 0%,#1a2535 60%,#0e1828 100%)">
         <svg class="slide-bg-pattern" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <circle cx="400" cy="250" r="140" fill="none" stroke="rgba(183,71,42,0.10)" stroke-width="1" stroke-dasharray="6 4"/>
-          <circle cx="400" cy="250" r="90" fill="none" stroke="rgba(183,71,42,0.12)" stroke-width="1" stroke-dasharray="4 6"/>
-          <circle cx="400" cy="250" r="40" fill="none" stroke="rgba(183,71,42,0.15)" stroke-width="1"/>
+          <circle cx="400" cy="250" r="140" fill="none" stroke="rgba(128,0,0,0.10)" stroke-width="1" stroke-dasharray="6 4"/>
+          <circle cx="400" cy="250" r="90" fill="none" stroke="rgba(128,0,0,0.12)" stroke-width="1" stroke-dasharray="4 6"/>
+          <circle cx="400" cy="250" r="40" fill="none" stroke="rgba(128,0,0,0.15)" stroke-width="1"/>
           {{ range $a := slice 0 45 90 135 180 225 270 315 }}
           <line x1="400" y1="250" x2="{{ add 400 (int (mul 140 0.71)) }}" y2="{{ add 250 (int (mul 140 0.71)) }}" stroke="rgba(255,255,255,0.04)" stroke-width="1" transform="rotate({{ $a }} 400 250)"/>
           {{ end }}
-          <circle cx="400" cy="250" r="8" fill="rgba(183,71,42,0.5)"/>
+          <circle cx="400" cy="250" r="8" fill="rgba(128,0,0,0.5)"/>
         </svg>
       </div>
     {{ end }}
