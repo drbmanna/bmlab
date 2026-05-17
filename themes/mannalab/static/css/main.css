@@ -440,7 +440,7 @@ ul    { list-style: none; }
 }
 .pi-card .team-links { flex-wrap: wrap; gap: 0.4rem; }
 .team-card.slot { border: 1.5px dashed var(--warm-200); background: var(--off-white); }
-.team-card.slot .team-photo { background: var(--warm-100); border-color: var(--warm-200); }
+.team-card.slot .team-photo { width: 175px; height: 225px; background: var(--warm-100); border-color: var(--warm-200); }
 .team-card.slot .team-photo-ph { color: var(--warm-200); }
 .team-card.slot .team-name { color: var(--warm-400); }
 
