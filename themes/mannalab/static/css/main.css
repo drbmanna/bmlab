@@ -283,17 +283,18 @@ ul    { list-style: none; }
 
 /* --- Page Header --- */
 .page-header {
-  background: var(--charcoal-3);
-  color: var(--white);
+  background: var(--white);
+  color: var(--charcoal);
   padding: 3.5rem 0;
   border-top: 3px solid var(--terra);
+  border-bottom: 1px solid var(--warm-200);
 }
 .page-header h1 {
   font-family: var(--font-heading);
   font-size: 2rem; font-weight: 700;
   margin-bottom: 0.4rem; letter-spacing: -0.02em;
 }
-.page-header p { color: rgba(255,255,255,0.55); font-size: 0.95rem; }
+.page-header p { color: var(--warm-600); font-size: 0.95rem; }
 
 /* --- Publications Tab Nav --- */
 .pub-tabnav {
