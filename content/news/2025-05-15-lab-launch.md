@@ -1,6 +1,6 @@
 ---
 title: "BM Lab is open"
-date: 2026-05-20
+date: 2026-05-17
 ---
 
 BM Lab is officially up and running at VIT Vellore. The lab combines computational, multi-omics, and experimental approaches to study microbial systems and molecular function.
