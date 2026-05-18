@@ -406,8 +406,50 @@ ul    { list-style: none; }
   overflow: hidden;
   display: flex; align-items: center; justify-content: center;
 }
-.pi-card { min-width: 300px; }
+.pi-card {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 2.5rem;
+  text-align: left;
+}
+.pi-card-left {
+  flex-shrink: 0;
+  width: 200px;
+  text-align: center;
+}
 .pi-card .team-photo { width: 175px; height: 225px; }
+.pi-card-right { flex: 1; }
+.pi-positions {
+  list-style: none;
+  padding: 0; margin: 0 0 1rem;
+}
+.pi-positions li {
+  font-size: 0.82rem;
+  color: var(--warm-700);
+  padding: 0.3rem 0;
+  border-bottom: 1px solid var(--warm-200);
+  line-height: 1.4;
+}
+.pi-positions li:last-child { border-bottom: none; }
+.pi-cv-link {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--terra);
+  border: 1px solid var(--terra);
+  border-radius: 3px;
+  padding: 0.25rem 0.7rem;
+  margin-bottom: 1.25rem;
+  transition: all var(--transition);
+}
+.pi-cv-link:hover { background: var(--terra); color: var(--white); }
+.pi-bio {
+  font-size: 0.85rem;
+  color: var(--warm-600);
+  line-height: 1.7;
+}
+.pi-bio p { margin: 0 0 0.75rem; }
+.pi-bio p:last-child { margin-bottom: 0; }
 .team-photo img { width: 100%; height: 100%; object-fit: cover; }
 .team-photo-ph  { color: var(--warm-400); }
 .team-name  { font-family: var(--font-heading); font-weight: 600; color: var(--charcoal); margin-bottom: 0.2rem; font-size: 0.93rem; letter-spacing: -0.01em; }
