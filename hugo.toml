@@ -19,7 +19,7 @@ disableKinds = ["taxonomy", "term"]
   researchgate   = ""   # paste full URL
   twitter        = ""   # paste full URL
   photo          = ""   # e.g. /img/bharat.jpg  (place file in static/img/)
-  description    = "Computational biology lab at VIT Vellore studying oxidative stress, antimicrobial resistance evolution, multi-omics integration, and molecular dynamics simulations."
+  description    = "We work on microbiome ecology, antimicrobial resistance, oxidative stress, and molecular simulations using multi-omics approaches."
 
 [markup]
   [markup.goldmark]
