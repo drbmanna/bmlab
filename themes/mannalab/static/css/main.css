@@ -944,6 +944,8 @@ ul    { list-style: none; }
   .pub-year-tag  { display: none; }
   .slideshow     { height: 360px; }
   .slide-img     { object-position: 65% center; }
+  .pi-card       { flex-direction: column; }
+  .pi-card-left  { width: 100%; }
   .slide-text    { font-size: 1.1rem; }
   .slide-caption { padding: 1.5rem 1.25rem 1.25rem; }
   .pi-inner      { grid-template-columns: 1fr; text-align: center; gap: 1.25rem; }
