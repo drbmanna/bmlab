@@ -901,6 +901,7 @@ ul    { list-style: none; }
   .pub-item      { grid-template-columns: 2rem 1fr; }
   .pub-year-tag  { display: none; }
   .slideshow     { height: 360px; }
+  .slide-img     { object-position: 65% center; }
   .slide-text    { font-size: 1.1rem; }
   .slide-caption { padding: 1.5rem 1.25rem 1.25rem; }
   .pi-inner      { grid-template-columns: 1fr; text-align: center; gap: 1.25rem; }
