@@ -5,10 +5,19 @@
   role_type: "pi"
   department: "School of Biosciences and Technology"
   location: "VIT Vellore, Tamil Nadu, India"
-  bio: ""
   photo: "img/team/bharat.jpg"
   email: "bharatmanna@gmail.com"
-  vit_link: ""        # paste your VIT faculty profile URL
-  scholar: "https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=X2-6aVoAAAAJ"         # paste full Google Scholar URL
-  orcid: "https://orcid.org/0000-0001-7394-8204"           # paste full ORCID URL
-  linkedin: "https://www.linkedin.com/in/drbmanna"        # paste full LinkedIn URL
+  vit_link: ""
+  scholar: "https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=X2-6aVoAAAAJ"
+  orcid: "https://orcid.org/0000-0001-7394-8204"
+  linkedin: "https://www.linkedin.com/in/drbmanna"
+  cv_url: ""
+  positions:
+    - "Associate Professor (Research), VIT Vellore, 2026–present"
+    - "Research Fellow, University of Auckland, 2022–2025"
+    - "Post-Doctoral Fellow, IISER Kolkata, 2021–2022"
+    - "Ph.D., IIT Kharagpur, 2017–2021"
+  bio: |
+    Bharat grew up in Mahishadal, West Bengal and developed an early interest in the molecular side of biology during his undergraduate years in B.Tech. Biotechnology. He moved to bioinformatics for his M.Tech. degree, where he graduated with a gold medal. He then joined IIT Kharagpur for his Ph.D., where his doctoral work used atomistic molecular dynamics simulations to understand how ionic liquids deconstruct lignocellulosic biomass for biofuel production. During this period he became interested in how computational methods could be applied beyond single-molecule problems to whole microbial communities. He pursued this direction as a postdoctoral researcher at the University of Auckland, where he spent three years applying multi-omics pipelines to study environmental microbiomes, with a focus on oxidative stress, microbial metabolism, and the evolution of antimicrobial resistance in mixed microbial communities. He started the BM Lab at VIT Vellore in 2026, bringing together his expertise in molecular simulations and systems-level microbial biology under one theme: From Systems to Atoms.
+
+    In his free time, Bharat enjoys travelling, cooking, theatre acting, and spending time with his family.
