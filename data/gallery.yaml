@@ -32,8 +32,15 @@
     - src: "img/gallery/invited/2025-DWF-Wellington_3.JPG"
       caption: "Drinking Water Science Forum, Wellington, New Zealand, 2025"
 
-- category: "Field Work"
+- category: "Field Visits"
   id: "field-work"
+  photos:
+    - src: "img/gallery/fieldvisit/WWTP-2024_1.jpeg"
+      caption: "Wastewater Treatment Plant visit, 2024"
+    - src: "img/gallery/fieldvisit/WWTP-2024_2.jpeg"
+      caption: "Wastewater Treatment Plant visit, 2024"
+    - src: "img/gallery/fieldvisit/WWTP-2023_3.jpeg"
+      caption: "Wastewater Treatment Plant visit, 2023"
 
 - category: "Lab Happy Hours"
   id: "happy-hours"
