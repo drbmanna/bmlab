@@ -813,7 +813,8 @@ ul    { list-style: none; }
   transition: background var(--transition);
   z-index: 10;
 }
-.slide-arrow:hover { background: rgba(128,0,0,0.7); border-color: transparent; }
+.slide-arrow:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.2); }
+.slide-arrow:disabled { cursor: default; pointer-events: none; }
 .slide-prev { left: 1.25rem; }
 .slide-next { right: 1.25rem; }
 .slide-dots {
