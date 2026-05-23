@@ -11,7 +11,7 @@ disableKinds = ["taxonomy", "term"]
   pi_title       = "Assistant Professor"
   department     = "School of Biosciences and Technology"
   affiliation    = "VIT Vellore"
-  email          = "bharatmanna@gmail.com"
+  email          = "bharat.manna@vit.ac.in"
   tagline        = "We study how microorganisms sense and respond to stress — combining molecular dynamics, comparative genomics, and multi-omics to link molecular mechanisms to evolutionary outcomes."
   google_scholar = "https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=X2-6aVoAAAAJ"
   orcid          = "https://orcid.org/0000-0001-7394-8204"
