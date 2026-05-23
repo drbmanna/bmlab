@@ -946,6 +946,7 @@ ul    { list-style: none; }
   .pub-year-tag  { display: none; }
   .slideshow     { height: 360px; }
   .slide-img     { object-position: 65% center; }
+  .slide-arrow   { display: none; }
   .pi-card       { flex-direction: column; }
   .pi-card-left  { width: 100%; }
   .slide-text    { font-size: 1.1rem; }
@@ -963,7 +964,8 @@ ul    { list-style: none; }
   .section    { padding: 3.5rem 0; }
   .hero       { padding: 3.75rem 0 3.25rem; }
   .slideshow  { height: 280px; }
+  .slide-img  { object-position: center center; }
   .slide-text { font-size: 0.97rem; }
-  .slide-arrow { width: 34px; height: 34px; }
+  .slide-arrow { display: none; }
   .pi-name    { font-size: 1.6rem; }
 }
