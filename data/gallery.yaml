@@ -1,8 +1,6 @@
 - category: "Conferences"
   id: "conferences"
   photos:
-    - src: "img/gallery/conferences/2025-ASM-LA-2025_1.JPG"
-      caption: "Annual Conference of the American Society for Microbiology (ASM 2025), Los Angeles, California, USA"
     - src: "img/gallery/conferences/2025-ASM-LA-2025_2.JPG"
       caption: "Annual Conference of the American Society for Microbiology (ASM 2025), Los Angeles, California, USA"
     - src: "img/gallery/conferences/2025-ARAE-Berlin_1.jpg"
@@ -15,8 +13,6 @@
       caption: "9th Asia Conference on Environment and Sustainable Development (ACESD 2024), Osaka, Japan"
     - src: "img/gallery/conferences/2024-ACESD-Osaka_2.jpg"
       caption: "9th Asia Conference on Environment and Sustainable Development (ACESD 2024), Osaka, Japan"
-    - src: "img/gallery/conferences/2024-ACESD-Osaka_3.jpg"
-      caption: "9th Asia Conference on Environment and Sustainable Development (ACESD 2024), Osaka, Japan"
     - src: "img/gallery/conferences/2023-Cyano-Victoria_1.jpg"
       caption: "8th Australia and New Zealand Cyanobacteria Workshop, Monash University, Victoria, Australia, 2023"
     - src: "img/gallery/conferences/2023-Cyano-Victoria_2.jpg"
@@ -26,10 +22,6 @@
   id: "invited"
   photos:
     - src: "img/gallery/invited/2025-DWF-Wellington_1.JPG"
-      caption: "Drinking Water Science Forum, Wellington, New Zealand, 2025"
-    - src: "img/gallery/invited/2025-DWF-Wellington_2.JPG"
-      caption: "Drinking Water Science Forum, Wellington, New Zealand, 2025"
-    - src: "img/gallery/invited/2025-DWF-Wellington_3.JPG"
       caption: "Drinking Water Science Forum, Wellington, New Zealand, 2025"
     - src: "img/gallery/invited/2026-Bionexus_1.jpg"
       caption: "BioNexus 2026, Haldia Institute of Technology, WB, India"
