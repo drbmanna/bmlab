@@ -785,7 +785,7 @@ ul    { list-style: none; }
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--terra-mid);
+  color: var(--terra-pale);
   margin-bottom: 0.45rem;
 }
 .slide-text {
