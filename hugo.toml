@@ -9,7 +9,7 @@ disableKinds = ["taxonomy", "term"]
 [params]
   pi_name        = "Dr. Bharat Manna"
   pi_title       = "Assistant Professor"
-  department     = "School of Biosciences and Technology"
+  department     = "School of Bio Sciences and Technology"
   affiliation    = "VIT Vellore"
   email          = "bharat.manna@vit.ac.in"
   tagline        = "We study how microorganisms sense and respond to stress — combining molecular dynamics, comparative genomics, and multi-omics to link molecular mechanisms to evolutionary outcomes."
