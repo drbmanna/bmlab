@@ -7,6 +7,7 @@
   volume: "60(14)"
   pages: "10728–10738"
   year: 2026
+  impact_factor: 11.3
   doi: "https://doi.org/10.1021/acs.est.6c02189"
   pdf: ""
   code: ""
@@ -19,6 +20,7 @@
   volume: "302"
   pages: "128326"
   year: 2026
+  impact_factor: 6.9
   doi: "https://doi.org/10.1016/j.micres.2025.128326"
   pdf: ""
   code: ""
@@ -31,6 +33,7 @@
   volume: "287"
   pages: "124353"
   year: 2025
+  impact_factor: 12.4
   doi: "https://doi.org/10.1016/j.watres.2025.124353"
   pdf: ""
   code: ""
@@ -43,6 +46,7 @@
   volume: "286"
   pages: "124238"
   year: 2025
+  impact_factor: 12.4
   doi: "https://doi.org/10.1016/j.watres.2025.124238"
   pdf: ""
   code: ""
@@ -55,6 +59,7 @@
   volume: "277"
   pages: "123366"
   year: 2025
+  impact_factor: 12.4
   doi: "https://doi.org/10.1016/j.watres.2025.123366"
   pdf: ""
   code: ""
@@ -67,6 +72,7 @@
   volume: "276"
   pages: "123229"
   year: 2025
+  impact_factor: 12.4
   doi: "https://doi.org/10.1016/j.watres.2025.123229"
   pdf: ""
   code: ""
@@ -79,6 +85,7 @@
   volume: "419"
   pages: "132061"
   year: 2025
+  impact_factor: 9.7
   doi: "https://doi.org/10.1016/j.biortech.2025.132061"
   pdf: ""
   code: ""
@@ -91,6 +98,7 @@
   volume: "63(6)"
   pages: "1–13"
   year: 2025
+  impact_factor: 3.9
   doi: "https://doi.org/10.1002/pol.20241137"
   pdf: ""
   code: ""
@@ -103,6 +111,7 @@
   volume: "16"
   pages: "2655"
   year: 2024
+  impact_factor: 3.0
   doi: "https://doi.org/10.3390/w16182655"
   pdf: ""
   code: ""
@@ -115,6 +124,7 @@
   volume: "366"
   pages: "143462"
   year: 2024
+  impact_factor: 8.1
   doi: "https://doi.org/10.1016/j.chemosphere.2024.143462"
   pdf: ""
   code: ""
@@ -127,6 +137,7 @@
   volume: "128(36)"
   pages: "8628–8640"
   year: 2024
+  impact_factor: 2.8
   doi: "https://doi.org/10.1021/acs.jpcb.4c03464"
   pdf: ""
   code: ""
@@ -139,6 +150,7 @@
   volume: "393"
   pages: "130009"
   year: 2024
+  impact_factor: 9.7
   doi: "https://doi.org/10.1016/j.biortech.2023.130009"
   pdf: ""
   code: ""
@@ -151,6 +163,7 @@
   volume: "127(39)"
   pages: "8406–8416"
   year: 2023
+  impact_factor: 3.3
   doi: "https://doi.org/10.1021/acs.jpcb.3c02125"
   pdf: ""
   code: ""
@@ -163,6 +176,7 @@
   volume: "206"
   pages: "47–59"
   year: 2023
+  impact_factor: 8.7
   doi: "https://doi.org/10.1016/j.renene.2023.02.036"
   pdf: ""
   code: ""
@@ -175,6 +189,7 @@
   volume: "5(1)"
   pages: "441–451"
   year: 2023
+  impact_factor: 4.4
   doi: "https://doi.org/10.1021/acsapm.2c01588"
   pdf: ""
   code: ""
@@ -187,6 +202,7 @@
   volume: "147"
   pages: "105788"
   year: 2022
+  impact_factor: 6.698
   doi: "https://doi.org/10.1016/j.compbiomed.2022.105788"
   pdf: ""
   code: ""
@@ -199,6 +215,7 @@
   volume: "423"
   pages: "127123"
   year: 2022
+  impact_factor: 14.224
   doi: "https://doi.org/10.1016/j.jhazmat.2021.127123"
   pdf: ""
   code: ""
@@ -211,6 +228,7 @@
   volume: "40"
   pages: "102487"
   year: 2021
+  impact_factor: 6.458
   doi: "https://doi.org/10.1016/j.nano.2021.102487"
   pdf: ""
   code: ""
@@ -223,6 +241,7 @@
   volume: "125(33)"
   pages: "9402–9416"
   year: 2021
+  impact_factor: 2.991
   doi: "https://doi.org/10.1021/acs.jpcb.1c02150"
   pdf: ""
   code: ""
@@ -235,6 +254,7 @@
   volume: "182"
   pages: "402–412"
   year: 2021
+  impact_factor: 6.953
   doi: "https://doi.org/10.1016/j.ijbiomac.2021.04.006"
   pdf: ""
   code: ""
@@ -247,6 +267,7 @@
   volume: "332"
   pages: "115875"
   year: 2021
+  impact_factor: 6.165
   doi: "https://doi.org/10.1016/j.molliq.2021.115875"
   pdf: ""
   code: ""
@@ -259,6 +280,7 @@
   volume: "9(4)"
   pages: "1613–1624"
   year: 2021
+  impact_factor: 8.198
   doi: "https://doi.org/10.1021/acssuschemeng.0c06865"
   pdf: ""
   code: ""
@@ -271,6 +293,7 @@
   volume: "477(7)"
   pages: "1287–1308"
   year: 2020
+  impact_factor: 4.097
   doi: "https://doi.org/10.1042/BCJ20190879"
   pdf: ""
   code: ""
@@ -283,6 +306,7 @@
   volume: "10(13)"
   pages: "7933–7947"
   year: 2020
+  impact_factor: 3.119
   doi: "https://doi.org/10.1039/C9RA09612D"
   pdf: ""
   code: ""
@@ -295,6 +319,7 @@
   volume: "9(1)"
   pages: "1–13"
   year: 2019
+  impact_factor: 4.011
   doi: "https://doi.org/10.1038/s41598-019-52843-w"
   pdf: ""
   code: ""
@@ -307,6 +332,7 @@
   volume: "431(7)"
   pages: "1353–1369"
   year: 2019
+  impact_factor: 5.067
   doi: "https://doi.org/10.1016/j.jmb.2019.02.021"
   pdf: ""
   code: ""
@@ -319,6 +345,7 @@
   volume: "37(15)"
   pages: "3987–4005"
   year: 2019
+  impact_factor: 3.31
   doi: "https://doi.org/10.1080/07391102.2018.1533496"
   pdf: ""
   code: ""
@@ -331,6 +358,7 @@
   volume: "54(69)"
   pages: "9635–9638"
   year: 2018
+  impact_factor: 6.29
   doi: "https://doi.org/10.1039/C8CC05557B"
   pdf: ""
   code: ""

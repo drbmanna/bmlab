@@ -44,7 +44,7 @@
               <div class="pub-title">{{ $p.title }}</div>
               <div class="pub-authors">{{ $p.authors | safeHTML }}</div>
               <div class="pub-journal">
-                {{ $p.journal }}{{ with $p.volume }}, <strong>{{ . }}</strong>{{ end }}{{ with $p.pages }}, {{ . }}{{ end }}
+                {{ $p.journal }}{{ with $p.volume }}, <strong>{{ . }}</strong>{{ end }}{{ with $p.pages }}, {{ . }}{{ end }}{{ with $p.impact_factor }} &middot; <span class="pub-if">IF: {{ . }}</span>{{ end }}
               </div>
               <div class="pub-badges">
                 {{ with $p.doi }}<a href="{{ . }}" class="pub-badge" target="_blank" rel="noopener">DOI</a>{{ end }}

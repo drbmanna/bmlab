@@ -363,6 +363,7 @@ ul    { list-style: none; }
 .pub-authors { font-size: 0.83rem; color: var(--warm-600); margin-bottom: 0.2rem; }
 .pub-authors strong { color: var(--charcoal); }
 .pub-journal { font-size: 0.82rem; color: var(--terra); font-style: italic; }
+.pub-if { font-style: normal; font-weight: 600; color: var(--warm-600); }
 .pub-badges  { display: flex; gap: 0.35rem; flex-wrap: wrap; margin-top: 0.6rem; }
 .pub-badge {
   font-family: var(--font-heading);
