@@ -1,7 +1,7 @@
 # role_type options: pi | phd | project | alumni
 
 - name: "Dr. Bharat Manna"
-  role: "Associate Professor (Research)"
+  role: "Associate Professor"
   role_type: "pi"
   department: "School of Bio Sciences and Technology"
   location: "VIT Vellore, Tamil Nadu, India"
@@ -13,7 +13,7 @@
   linkedin: "https://www.linkedin.com/in/drbmanna"
   cv_url: ""
   positions:
-    - "Associate Professor (Research), VIT Vellore, 2026–present"
+    - "Associate Professor, VIT Vellore, 2026–present"
     - "Research Fellow, University of Auckland, 2022–2025"
     - "Post-Doctoral Fellow, IISER Kolkata, 2021–2022"
     - "Ph.D., IIT Kharagpur, 2017–2021"
