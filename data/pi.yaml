@@ -1,0 +1,103 @@
+# PI profile data. Drives /bm/ (layouts/bm/list.html).
+# Sections with no entries are hidden automatically — delete or comment out
+# a whole block rather than leaving placeholder text on the live site.
+
+about: |
+  Bharat grew up in Mahishadal, West Bengal. During his B.Tech. in Biotechnology, he developed a
+  strong interest in computational biology. He later transitioned into bioinformatics for his
+  M.Tech. studies, graduating with a gold medal. He subsequently pursued Ph.D. at IIT Kharagpur,
+  where his doctoral research employed atomistic molecular dynamics simulations to investigate how
+  ionic liquids deconstruct lignocellulosic biomass for biofuel production. During this period, his
+  research interests expanded toward applying computational methods beyond single-molecule systems
+  to the study of complex microbial communities. He pursued this direction further as a
+  postdoctoral researcher at the University of Auckland, where he spent three years developing and
+  applying multi-omics pipelines to investigate environmental microbiomes, with a particular focus
+  on oxidative stress, microbial metabolism, and the evolution of antimicrobial resistance in
+  complex microbial communities. He started his independent career in 2026 at VIT Vellore, bringing
+  together his expertise in molecular simulations and systems-level microbial biology under one
+  theme: From Systems to Atoms.
+
+  Outside of research, Bharat enjoys travelling, cooking, theatre acting, and spending quality time
+  with his family.
+
+# Reverse-chronological. `note` is optional (distinction, thesis title).
+education:
+  - degree: "Ph.D., Computational Biology"
+    years: "2017–2021"
+    institution: "Indian Institute of Technology Kharagpur, India"
+    note: ""
+  - degree: "M.Tech., Bioinformatics"
+    years: "2015–2017"
+    institution: "Maulana Abul Kalam Azad University of Technology (MAKAUT), West Bengal, India"
+    note: ""
+
+# Reverse-chronological. `note` is optional (host, lab, PI).
+career:
+  - role: "Associate Professor"
+    years: "2026–present"
+    institution: "School of Bio Sciences and Technology (SBST), VIT Vellore, India"
+    note: ""
+  - role: "Research Fellow"
+    years: "2022–2025"
+    institution: "University of Auckland, New Zealand"
+    note: ""
+  - role: "Post-Doctoral Fellow"
+    years: "2021–2022"
+    institution: "IISER Kolkata, India"
+    note: ""
+
+# Reverse-chronological. `body` and `detail` are both optional.
+awards:
+  - year: "2020"
+    title: "Promising Innovative Implementable Idea Award, SAMHAR-COVID19 Hackathon"
+    body: "C-DAC, MeitY and DST (Govt. of India), with NVIDIA and OpenACC"
+    detail: "Led team Sanjeevani; proposed repurposable drug candidates later validated in an ICMR in vitro trial."
+  - year: "2017–2021"
+    title: "Institute Doctoral Research Fellowship"
+    body: "IIT Kharagpur, India"
+    detail: ""
+  - year: "2017"
+    title: "Gold Medal, M.Tech. Bioinformatics"
+    body: "MAKAUT, West Bengal, India"
+    detail: ""
+  - year: "2015–2017"
+    title: "Post-Graduate Fellowship"
+    body: "AICTE, India"
+    detail: ""
+  - year: "2015"
+    title: "GATE qualified in Biotechnology"
+    body: ""
+    detail: ""
+
+# Sanctioned projects only. Leave empty to hide the section.
+grants: []
+#  - title: "TODO project title"
+#    agency: "TODO funding agency"
+#    years: "TODO"
+#    role: "Principal Investigator"
+#    amount: ""
+
+# Invited talks. Reverse-chronological.
+talks:
+  - title: "Visualizing the Invisible: A Computational Journey from Systems to Atoms"
+    venue: "BioNEXUS 2026, Haldia Institute of Technology"
+    location: "Edusat Hall, Haldia, West Bengal, India"
+    date: "7 May 2026"
+  - title: "Understanding Antimicrobial Resistance Drivers in New Zealand's Drinking Water Systems"
+    venue: "Drinking Water Science Forum 2025, Water New Zealand"
+    location: "Te Papa, Wellington, New Zealand"
+    date: "26 February 2025"
+  - title: "Integrating theoretical and experimental strategies to elucidate and ameliorate the inhibition of GH1 beta-glucosidases"
+    venue: "Department of Biological Sciences Seminar Series, IISER Kolkata"
+    location: "Kolkata, India"
+    date: "20 April 2022"
+
+# Sessions chaired at conferences. Reverse-chronological.
+session_chair:
+  - title: "Session 9: Waste Management and Waste Valorization"
+    venue: "9th Asia Conference on Environment and Sustainable Development"
+    location: "Osaka, Japan"
+    date: "9–11 November 2024"
+
+# Peer review summary line shown above the guest editorial entries.
+peer_review: 'Peer reviewer: 30+ reviews. For details visit <a href="https://orcid.org/0000-0001-7394-8204" target="_blank" rel="noopener">ORCID</a>.'
