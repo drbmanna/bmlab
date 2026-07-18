@@ -4,7 +4,7 @@
 
 <div class="page-header">
   <div class="container">
-    <h1>{{ $pi.name }}</h1>
+    <h1>{{ .Title }}</h1>
   </div>
 </div>
 
@@ -25,6 +25,7 @@
         {{ end }}
       </div>
       <div class="pi-profile-meta">
+        <div class="pi-profile-name">{{ $pi.name }}</div>
         <div class="pi-profile-role">{{ $pi.role }}</div>
         {{ with $pi.department }}<div class="pi-profile-line">{{ . }}</div>{{ end }}
         {{ with $pi.location }}<div class="pi-profile-line">{{ . }}</div>{{ end }}

@@ -999,11 +999,16 @@ ul    { list-style: none; }
 }
 .pi-profile-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .pi-profile-meta { flex: 1; padding-top: 0.25rem; }
-.pi-profile-role {
+.pi-profile-name {
   font-family: var(--font-heading);
-  font-size: 1.4rem;
+  font-size: 1.55rem;
+  line-height: 1.2;
   color: var(--charcoal);
-  margin-bottom: 0.75rem;
+}
+.pi-profile-role {
+  color: var(--terra);
+  font-weight: 600;
+  margin: 0.3rem 0 0.75rem;
 }
 .pi-profile-line { color: var(--warm-600); font-size: 0.95rem; line-height: 1.7; }
 .pi-profile-line a { color: var(--warm-600); }
