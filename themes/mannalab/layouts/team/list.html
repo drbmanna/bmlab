@@ -14,7 +14,8 @@
     <h2 class="team-section-label">Principal Investigator</h2>
     <div class="team-grid">
       {{ range where $team "role_type" "pi" }}
-      <div class="team-card">
+      <div class="team-card pi-card">
+        <div class="pi-card-left">
           <div class="team-photo">
             {{ if .photo }}
               <img src="{{ .photo | relURL }}" alt="{{ .name }}">
@@ -26,12 +27,15 @@
               </div>
             {{ end }}
           </div>
+        </div>
+        <div class="pi-card-right">
           <div class="team-name">{{ .name }}</div>
           <div class="team-role">{{ .role }}</div>
           {{ with .department }}<div class="team-dept">{{ . }}</div>{{ end }}
           {{ with .location }}<div class="team-location">{{ . }}</div>{{ end }}
           {{ partial "social-links.html" . }}
           <a href="{{ "/bm/" | relURL }}" class="pi-more-link">Full profile &rarr;</a>
+        </div>
       </div>
       {{ end }}
     </div>
