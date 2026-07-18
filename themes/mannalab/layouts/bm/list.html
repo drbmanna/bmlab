@@ -103,28 +103,6 @@
     </div>
     {{ end }}
 
-    {{/* ── Grants ── */}}
-    {{ with $d.grants }}
-    <div class="pi-block">
-      <div class="section-eyebrow"></div>
-      <h2 class="section-title">Grants and Funding</h2>
-      <ul class="cv-timeline">
-        {{ range . }}
-        <li>
-          <div class="cv-years">{{ .years }}</div>
-          <div class="cv-body">
-            <div class="cv-title">{{ .title }}</div>
-            <div class="cv-where">{{ .agency }}</div>
-            {{ if or .role .amount }}
-            <div class="cv-note">{{ .role }}{{ if and .role .amount }} · {{ end }}{{ .amount }}</div>
-            {{ end }}
-          </div>
-        </li>
-        {{ end }}
-      </ul>
-    </div>
-    {{ end }}
-
     {{/* ── Invited talks ── */}}
     {{ with $d.talks }}
     <div class="pi-block">
