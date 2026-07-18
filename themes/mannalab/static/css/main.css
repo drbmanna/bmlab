@@ -416,11 +416,16 @@ ul    { list-style: none; }
 }
 .pi-card-left {
   flex-shrink: 0;
-  width: 200px;
+  width: 230px;
   text-align: center;
 }
-.pi-card .team-photo { width: 175px; height: 225px; }
-.pi-card-right { flex: 1; }
+.pi-card .team-photo { width: 230px; height: 295px; margin: 0; }
+.pi-card-right { flex: 1; padding-top: 0.4rem; }
+.pi-card .team-name { font-size: 1.5rem; margin-bottom: 0.3rem; }
+.pi-card .team-role { font-size: 1rem; margin-bottom: 0.7rem; }
+.pi-card .team-dept,
+.pi-card .team-location { font-size: 0.95rem; line-height: 1.6; }
+.pi-card .team-links { justify-content: flex-start; margin-top: 1.1rem; }
 .pi-positions {
   list-style: none;
   padding: 0; margin: 0 0 1rem;
@@ -951,8 +956,10 @@ ul    { list-style: none; }
   .slideshow     { height: 360px; }
   .slide-img     { object-position: 65% center; }
   .slide-arrow   { display: none; }
-  .pi-card       { flex-direction: column; }
+  .pi-card       { flex-direction: column; text-align: center; gap: 1.5rem; }
   .pi-card-left  { width: 100%; }
+  .pi-card .team-photo  { margin: 0 auto; }
+  .pi-card .team-links  { justify-content: center; }
   .slide-text    { font-size: 1.1rem; }
   .slide-caption { padding: 1.5rem 1.25rem 1.25rem; }
   .pi-inner      { grid-template-columns: 1fr; text-align: center; gap: 1.25rem; }
