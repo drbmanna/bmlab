@@ -1023,6 +1023,8 @@ ul    { list-style: none; }
 .pi-profile .team-links { margin-top: 1rem; justify-content: flex-start; }
 
 .pi-block { margin-top: 3rem; }
+/* section headings sit below the page title, not level with it */
+.pi-block .section-title { font-size: 1.75rem; }
 
 .pi-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .pi-tag {
