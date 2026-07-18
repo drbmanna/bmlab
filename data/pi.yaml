@@ -61,12 +61,8 @@ awards:
     body: "MAKAUT, West Bengal, India"
     detail: ""
   - year: "2015–2017"
-    title: "Post-Graduate Fellowship"
+    title: "Post-Graduate Fellowship through GATE (BT)"
     body: "AICTE, India"
-    detail: ""
-  - year: "2015"
-    title: "GATE qualified in Biotechnology"
-    body: ""
     detail: ""
 
 # Grants are not listed here. They get their own nav tab once there is one to list.
