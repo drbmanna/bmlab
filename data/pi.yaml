@@ -69,13 +69,7 @@ awards:
     body: ""
     detail: ""
 
-# Sanctioned projects only. Leave empty to hide the section.
-grants: []
-#  - title: "TODO project title"
-#    agency: "TODO funding agency"
-#    years: "TODO"
-#    role: "Principal Investigator"
-#    amount: ""
+# Grants are not listed here. They get their own nav tab once there is one to list.
 
 # Invited talks. Reverse-chronological.
 talks:
