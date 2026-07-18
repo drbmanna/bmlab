@@ -446,11 +446,13 @@ ul    { list-style: none; }
 }
 .pi-cv-link:hover { background: var(--terra); color: var(--white); }
 .pi-bio {
-  font-size: 0.85rem;
+  font-size: 0.98rem;
   color: var(--warm-600);
-  line-height: 1.7;
+  line-height: 1.75;
+  text-align: justify;
+  hyphens: auto;
 }
-.pi-bio p { margin: 0 0 0.75rem; }
+.pi-bio p { margin: 0 0 1rem; }
 .pi-bio p:last-child { margin-bottom: 0; }
 .team-photo img { width: 100%; height: 100%; object-fit: cover; }
 .team-photo-ph  { color: var(--warm-400); }
@@ -507,7 +509,7 @@ ul    { list-style: none; }
   margin-bottom: 0.65rem;
 }
 .pos-title { font-family: var(--font-heading); font-size: 1.05rem; font-weight: 600; color: var(--charcoal); margin-bottom: 0.45rem; letter-spacing: -0.01em; }
-.pos-desc  { color: var(--warm-600); font-size: 0.9rem; line-height: 1.75; }
+.pos-desc  { color: var(--warm-600); font-size: 0.9rem; line-height: 1.75; text-align: justify; hyphens: auto; }
 .arrow-list { display: flex; flex-direction: column; gap: 0.55rem; }
 .arrow-list li {
   padding-left: 1.4rem; position: relative;
@@ -675,7 +677,7 @@ ul    { list-style: none; }
 .research-block:last-child { border-bottom: none; margin-bottom: 0; }
 .research-block-head { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
 .research-block h2 { font-family: var(--font-heading); font-size: 1.45rem; font-weight: 700; color: var(--charcoal); letter-spacing: -0.02em; }
-.research-desc { color: var(--warm-600); line-height: 1.82; max-width: 740px; }
+.research-desc { color: var(--warm-600); line-height: 1.82; max-width: 740px; text-align: justify; hyphens: auto; }
 .method-tags   { display: flex; gap: 0.45rem; flex-wrap: wrap; margin-top: 1rem; }
 .method-tag    {
   font-family: var(--font-heading);
@@ -971,3 +973,151 @@ ul    { list-style: none; }
   .slide-arrow { display: none; }
   .pi-name    { font-size: 1.6rem; }
 }
+
+/* ============================================================
+   PI profile page (/pi/)
+   ============================================================ */
+.pi-profile {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--warm-200);
+}
+.pi-profile-photo {
+  flex: 0 0 190px;
+  width: 190px;
+  height: 245px;
+  overflow: hidden;
+  border-radius: var(--radius);
+  border: 1px solid var(--warm-200);
+  background: var(--warm-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--warm-400);
+}
+.pi-profile-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.pi-profile-meta { flex: 1; padding-top: 0.25rem; }
+.pi-profile-role {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  color: var(--charcoal);
+  margin-bottom: 0.75rem;
+}
+.pi-profile-line { color: var(--warm-600); font-size: 0.95rem; line-height: 1.7; }
+.pi-profile-line a { color: var(--warm-600); }
+.pi-profile-line a:hover { color: var(--terra); }
+.pi-profile .team-links { margin-top: 1rem; justify-content: flex-start; }
+
+.pi-block { margin-top: 3rem; }
+
+.pi-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.pi-tag {
+  background: var(--terra-pale);
+  color: var(--terra-dark);
+  border: 1px solid var(--warm-200);
+  border-radius: 100px;
+  padding: 0.3rem 0.85rem;
+  font-size: 0.87rem;
+  font-weight: 500;
+}
+
+/* CV-style two-column timeline, used for education / career / awards / grants */
+.cv-timeline { list-style: none; }
+.cv-timeline li {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--warm-200);
+}
+.cv-timeline li:last-child { border-bottom: none; }
+.cv-years {
+  flex: 0 0 130px;
+  color: var(--terra);
+  font-weight: 600;
+  font-size: 0.92rem;
+  padding-top: 0.1rem;
+}
+.cv-body { flex: 1; }
+.cv-title { color: var(--charcoal); font-weight: 600; line-height: 1.45; }
+.cv-where { color: var(--warm-600); font-size: 0.94rem; margin-top: 0.15rem; }
+.cv-note  { color: var(--warm-400); font-size: 0.88rem; margin-top: 0.25rem; }
+
+/* ============================================================
+   Teaching page (/teaching/)
+   ============================================================ */
+.course-card {
+  background: var(--white);
+  border: 1px solid var(--warm-200);
+  border-left: 3px solid var(--terra);
+  border-radius: var(--radius);
+  padding: 1.4rem 1.6rem;
+  margin-bottom: 1.1rem;
+  box-shadow: var(--shadow);
+  transition: box-shadow var(--transition);
+}
+.course-card:hover { box-shadow: var(--shadow-md); }
+.course-card.past { border-left-color: var(--warm-400); opacity: 0.88; }
+.course-head { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.5rem; }
+.course-code {
+  background: var(--terra);
+  color: var(--white);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 0.22rem 0.6rem;
+  border-radius: 3px;
+}
+.course-card.past .course-code { background: var(--warm-400); }
+.course-type {
+  color: var(--warm-400);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+}
+.course-title {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  color: var(--charcoal);
+  line-height: 1.3;
+}
+.course-meta { color: var(--warm-600); font-size: 0.9rem; margin-top: 0.25rem; }
+.course-desc {
+  color: var(--warm-600);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-top: 0.7rem;
+  text-align: justify;
+  hyphens: auto;
+}
+
+/* Full-profile link on the trimmed Team page PI card */
+.pi-more-link {
+  display: inline-block;
+  margin-top: 0.9rem;
+  color: var(--terra);
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+.pi-more-link:hover { text-decoration: underline; }
+
+@media (max-width: 768px) {
+  .pi-profile { flex-direction: column; align-items: center; text-align: center; }
+  .pi-profile-meta { text-align: center; }
+  .pi-profile .team-links { justify-content: center; }
+  .cv-timeline li { flex-direction: column; gap: 0.3rem; }
+  .cv-years { flex: none; }
+  /* justified text rivers badly at phone widths */
+  .pi-bio, .course-desc, .research-desc, .pos-desc { text-align: left; }
+}
+
+.pi-peer-review {
+  color: var(--warm-600);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+.cv-title a { color: var(--charcoal); }
+.cv-title a:hover { color: var(--terra); }

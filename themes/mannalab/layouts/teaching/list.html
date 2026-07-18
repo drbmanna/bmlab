@@ -1,0 +1,64 @@
+{{ define "main" }}
+{{ $d := hugo.Data.teaching }}
+
+<div class="page-header">
+  <div class="container">
+    <h1>Teaching</h1>
+    <p>Courses offered at VIT Vellore.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container" style="max-width:820px">
+
+    {{ with $d.intro }}
+    <p class="section-sub" style="margin-bottom:2.5rem">{{ . | markdownify }}</p>
+    {{ end }}
+
+    {{ with $d.current }}
+    <div class="section-eyebrow"></div>
+    <h2 class="section-title">{{ default "Current Courses" $d.current_heading }}</h2>
+    {{ range . }}
+    <div class="course-card">
+      <div class="course-head">
+        <span class="course-code">{{ .code }}</span>
+        {{ with .type }}<span class="course-type">{{ . }}</span>{{ end }}
+      </div>
+      <div class="course-title">{{ .title }}</div>
+      <div class="course-meta">{{ .programme }}{{ with .credits }} · {{ . }}{{ end }}</div>
+      {{ with .description }}<p class="course-desc">{{ . | markdownify }}</p>{{ end }}
+    </div>
+    {{ end }}
+    {{ end }}
+
+    {{ with $d.past }}
+    <div style="margin-top:3rem">
+      <div class="section-eyebrow"></div>
+      <h2 class="section-title">Previously Taught</h2>
+      {{ range . }}
+      <div class="course-card past">
+        <div class="course-head">
+          <span class="course-code">{{ .code }}</span>
+          {{ with .type }}<span class="course-type">{{ . }}</span>{{ end }}
+        </div>
+        <div class="course-title">{{ .title }}</div>
+        <div class="course-meta">{{ .programme }}{{ with .term }} · {{ . }}{{ end }}{{ with .credits }} · {{ . }}{{ end }}</div>
+        {{ with .description }}<p class="course-desc">{{ . | markdownify }}</p>{{ end }}
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+
+    {{ with $d.projects }}
+    <div style="margin-top:3rem">
+      <div class="section-eyebrow"></div>
+      <h2 class="section-title">Student Projects</h2>
+      <ul class="arrow-list">
+        {{ range . }}<li>{{ . | markdownify }}</li>{{ end }}
+      </ul>
+    </div>
+    {{ end }}
+
+  </div>
+</section>
+{{ end }}

@@ -3,7 +3,7 @@
 - name: "Dr. Bharat Manna"
   role: "Associate Professor"
   role_type: "pi"
-  department: "School of Bio Sciences and Technology"
+  department: "School of Bio Sciences and Technology (SBST)"
   location: "VIT Vellore, Tamil Nadu, India"
   photo: "img/team/bharat.jpg"
   email: "bharat.manna@vit.ac.in"
@@ -11,17 +11,3 @@
   scholar: "https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=X2-6aVoAAAAJ"
   orcid: "https://orcid.org/0000-0001-7394-8204"
   linkedin: "https://www.linkedin.com/in/drbmanna"
-  cv_url: ""
-  positions:
-    - "Associate Professor, VIT Vellore, 2026–present"
-    - "Research Fellow, University of Auckland, 2022–2025"
-    - "Post-Doctoral Fellow, IISER Kolkata, 2021–2022"
-    - "Ph.D., IIT Kharagpur, 2017–2021"
-  bio: |
-    Bharat grew up in Mahishadal, West Bengal. During his B.Tech. in Biotechnology, he developed a strong interest in computational biology. He later transitioned into bioinformatics for his M.Tech. studies, graduating with a gold medal. He subsequently pursued Ph.D. at IIT Kharagpur, where his doctoral research employed atomistic molecular dynamics simulations to investigate how ionic liquids deconstruct lignocellulosic biomass for biofuel production. During this period, his research interests expanded toward applying computational methods beyond single-molecule systems to the study of complex microbial communities. He pursued this direction further as a postdoctoral researcher at the University of Auckland, where he spent three years developing and applying multi-omics pipelines to investigate environmental microbiomes, with a particular focus on oxidative stress, microbial metabolism, and the evolution of antimicrobial resistance in complex microbial communities. He started his independent career in 2026 at VIT Vellore, bringing together his expertise in molecular simulations and systems-level microbial biology under one theme: From Systems to Atoms.
-
-    Outside of research, Bharat enjoys travelling, cooking, theatre acting, and spending quality time with his family.
-
-    <p style="color:var(--terra);font-weight:600;margin:1.1rem 0 0.4rem">Teaching</p>
-    BBIT327L Data Analytics in Bioinformatics, B.Tech CSE (Bioinformatics), Fall 2026–27<br>
-    BBIT417P Analytical Bioinformatics Lab, B.Tech CSE (Bioinformatics), Fall 2026–27

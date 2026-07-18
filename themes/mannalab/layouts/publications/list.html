@@ -11,7 +11,6 @@
     <a href="#journals"      class="pub-tab active" data-section="journals">Journals</a>
     <a href="#conferences"   class="pub-tab"        data-section="conferences">Conferences</a>
     <a href="#book-chapters" class="pub-tab"        data-section="book-chapters">Book Chapters</a>
-    <a href="#editorials"    class="pub-tab"        data-section="editorials">Editorials</a>
   </div>
 </div>
 
@@ -124,38 +123,6 @@
               </div>
             </div>
             <div class="pub-year-tag">{{ $ch.year }}</div>
-          </div>
-        {{ end }}
-        </div>
-      {{ end }}
-    </div>
-
-    {{/* ── EDITORIALS ───────────────────────────────────── */}}
-    <div id="editorials" class="pub-section" style="margin-top:4rem">
-      <div class="pub-section-head">
-        <div class="eyebrow">Editorial</div>
-        <h2 class="section-title">Guest Editorials</h2>
-      </div>
-
-      {{ $editorials := hugo.Data.editorials }}
-      {{ if $editorials }}
-        {{ $total := len $editorials }}
-        <div class="pub-list">
-        {{ range $i, $e := $editorials }}
-          {{ $num := sub $total $i }}
-          <div class="pub-item">
-            <div class="pub-num">{{ $num }}</div>
-            <div>
-              <div class="pub-title">{{ $e.title }}</div>
-              <div class="pub-authors">{{ $e.role }} &middot; {{ $e.type }}</div>
-              <div class="pub-journal">
-                {{ $e.journal }}{{ with $e.impact_factor }} &middot; <span class="pub-if">IF: {{ . }}</span>{{ end }}
-              </div>
-              <div class="pub-badges">
-                {{ with $e.url }}<a href="{{ . }}" class="pub-badge" target="_blank" rel="noopener">Link</a>{{ end }}
-              </div>
-            </div>
-            {{ with $e.year }}<div class="pub-year-tag">{{ . }}</div>{{ end }}
           </div>
         {{ end }}
         </div>

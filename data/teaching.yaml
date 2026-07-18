@@ -1,0 +1,48 @@
+# Teaching data. Drives /teaching/ (layouts/teaching/list.html).
+# Move a course into `past` once the term ends, and give it its own `term` value
+# (the `current` block takes its term from `current_heading`).
+
+# Optional lead paragraph above the course list. Empty = not rendered.
+intro: ""
+
+current_heading: "Fall 2026–27"
+
+current:
+  - code: "BBIT327L"
+    title: "Data Analytics in Bioinformatics"
+    programme: "B.Tech. CSE (Bioinformatics)"
+    type: "Theory"
+    credits: "3 credits · 45 lecture hours"
+    description: >
+      Machine learning applied to biological data. The course opens with supervised and
+      unsupervised learning, then works through the problems that make omics data awkward:
+      high dimensionality, class imbalance, and integration across data levels. Students cover
+      dimensionality reduction, gene selection from multi-level omics, random forests for
+      imbalanced genomic classification, and optimisation methods for microarray feature
+      selection. Later modules move into image segmentation, deep learning for medical imaging
+      and diagnostics, and genome signal processing for hotspot identification.
+
+  - code: "BBIT417P"
+    title: "Analytical Bioinformatics Lab"
+    programme: "B.Tech. CSE (Bioinformatics)"
+    type: "Laboratory"
+    credits: "1 credit · 30 laboratory hours"
+    description: >
+      Hands-on sequence and structure analysis. Students retrieve and manage data from the
+      major biological databases, then work through pairwise alignment by global, local, and
+      dot plot methods before moving to BLAST searches and multiple sequence alignment with
+      phylogeny in Clustal Omega. The structural half covers motif and domain searching, the
+      PDB, protein secondary structure prediction, and 3D structure visualisation.
+
+past: []
+#  - code: ""
+#    title: ""
+#    programme: ""
+#    term: ""
+#    type: ""
+#    credits: ""
+#    description: ""
+
+# Optional. Shown under a "Student Projects" heading if non-empty.
+projects: []
+#  - "Open to supervising final-year B.Tech. and M.Tech. projects in computational biology."

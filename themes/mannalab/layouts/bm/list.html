@@ -1,0 +1,201 @@
+{{ define "main" }}
+{{ $pi := index (where hugo.Data.team "role_type" "pi") 0 }}
+{{ $d  := hugo.Data.pi }}
+
+<div class="page-header">
+  <div class="container">
+    <h1>{{ $pi.name }}</h1>
+    <p>{{ $pi.role }}, {{ $pi.department }}</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container" style="max-width:900px">
+
+    {{/* ── Identity card ── */}}
+    <div class="pi-profile">
+      <div class="pi-profile-photo">
+        {{ if $pi.photo }}
+          <img src="{{ $pi.photo | relURL }}" alt="{{ $pi.name }}">
+        {{ else }}
+          <div class="team-photo-ph">
+            <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+            </svg>
+          </div>
+        {{ end }}
+      </div>
+      <div class="pi-profile-meta">
+        <div class="pi-profile-role">{{ $pi.role }}</div>
+        {{ with $pi.department }}<div class="pi-profile-line">{{ . }}</div>{{ end }}
+        {{ with $pi.location }}<div class="pi-profile-line">{{ . }}</div>{{ end }}
+        {{ with $pi.email }}<div class="pi-profile-line"><a href="mailto:{{ . }}">{{ . }}</a></div>{{ end }}
+        {{ partial "social-links.html" $pi }}
+      </div>
+    </div>
+
+    {{/* ── About ── */}}
+    {{ with $d.about }}
+    <div class="pi-block">
+      <div class="section-eyebrow"></div>
+      <h2 class="section-title">About</h2>
+      <div class="pi-bio">{{ . | markdownify }}</div>
+    </div>
+    {{ end }}
+
+    {{/* ── Career ── */}}
+    {{ with $d.career }}
+    <div class="pi-block">
+      <div class="section-eyebrow"></div>
+      <h2 class="section-title">Professional Career</h2>
+      <ul class="cv-timeline">
+        {{ range . }}
+        <li>
+          <div class="cv-years">{{ .years }}</div>
+          <div class="cv-body">
+            <div class="cv-title">{{ .role }}</div>
+            <div class="cv-where">{{ .institution }}</div>
+            {{ with .note }}<div class="cv-note">{{ . }}</div>{{ end }}
+          </div>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+
+    {{/* ── Education ── */}}
+    {{ with $d.education }}
+    <div class="pi-block">
+      <div class="section-eyebrow"></div>
+      <h2 class="section-title">Academic Background</h2>
+      <ul class="cv-timeline">
+        {{ range . }}
+        <li>
+          <div class="cv-years">{{ .years }}</div>
+          <div class="cv-body">
+            <div class="cv-title">{{ .degree }}</div>
+            <div class="cv-where">{{ .institution }}</div>
+            {{ with .note }}<div class="cv-note">{{ . }}</div>{{ end }}
+          </div>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+
+    {{/* ── Awards ── */}}
+    {{ with $d.awards }}
+    <div class="pi-block">
+      <div class="section-eyebrow"></div>
+      <h2 class="section-title">Awards and Fellowships</h2>
+      <ul class="cv-timeline">
+        {{ range . }}
+        <li>
+          <div class="cv-years">{{ .year }}</div>
+          <div class="cv-body">
+            <div class="cv-title">{{ .title }}</div>
+            {{ with .body }}<div class="cv-where">{{ . }}</div>{{ end }}
+            {{ with .detail }}<div class="cv-note">{{ . }}</div>{{ end }}
+          </div>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+
+    {{/* ── Grants ── */}}
+    {{ with $d.grants }}
+    <div class="pi-block">
+      <div class="section-eyebrow"></div>
+      <h2 class="section-title">Grants and Funding</h2>
+      <ul class="cv-timeline">
+        {{ range . }}
+        <li>
+          <div class="cv-years">{{ .years }}</div>
+          <div class="cv-body">
+            <div class="cv-title">{{ .title }}</div>
+            <div class="cv-where">{{ .agency }}</div>
+            {{ if or .role .amount }}
+            <div class="cv-note">{{ .role }}{{ if and .role .amount }} · {{ end }}{{ .amount }}</div>
+            {{ end }}
+          </div>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+
+    {{/* ── Invited talks ── */}}
+    {{ with $d.talks }}
+    <div class="pi-block">
+      <div class="section-eyebrow"></div>
+      <h2 class="section-title">Invited Talks</h2>
+      <ul class="cv-timeline">
+        {{ range . }}
+        <li>
+          <div class="cv-years">{{ .date }}</div>
+          <div class="cv-body">
+            <div class="cv-title">{{ .title }}</div>
+            <div class="cv-where">{{ .venue }}</div>
+            {{ with .location }}<div class="cv-note">{{ . }}</div>{{ end }}
+          </div>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+
+    {{/* ── Session chair ── */}}
+    {{ with $d.session_chair }}
+    <div class="pi-block">
+      <div class="section-eyebrow"></div>
+      <h2 class="section-title">Session Chair</h2>
+      <ul class="cv-timeline">
+        {{ range . }}
+        <li>
+          <div class="cv-years">{{ .date }}</div>
+          <div class="cv-body">
+            <div class="cv-title">{{ .title }}</div>
+            <div class="cv-where">{{ .venue }}</div>
+            {{ with .location }}<div class="cv-note">{{ . }}</div>{{ end }}
+          </div>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+
+    {{/* ── Editorial and peer review ── */}}
+    {{ $editorials := hugo.Data.editorials }}
+    {{ if or $editorials $d.peer_review }}
+    <div class="pi-block">
+      <div class="section-eyebrow"></div>
+      <h2 class="section-title">Editorial and Peer Review</h2>
+
+      {{ with $d.peer_review }}
+      <p class="pi-peer-review">{{ . | markdownify }}</p>
+      {{ end }}
+
+      {{ with $editorials }}
+      <ul class="cv-timeline">
+        {{ range . }}
+        <li>
+          <div class="cv-years">{{ .year }}</div>
+          <div class="cv-body">
+            <div class="cv-title">
+              {{ if .url }}<a href="{{ .url }}" target="_blank" rel="noopener">{{ .title }}</a>
+              {{ else }}{{ .title }}{{ end }}
+            </div>
+            <div class="cv-where">{{ .journal }}</div>
+            <div class="cv-note">{{ .role }} &middot; {{ .type }}</div>
+          </div>
+        </li>
+        {{ end }}
+      </ul>
+      {{ end }}
+    </div>
+    {{ end }}
+
+  </div>
+</section>
+{{ end }}
