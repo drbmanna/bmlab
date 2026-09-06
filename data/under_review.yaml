@@ -1,0 +1,18 @@
+# Manuscripts under review / preprints. Newest first.
+# status: e.g. "Under review", "Under revision", "Submitted"
+# venue: target journal (optional). doi: bioRxiv/preprint DOI (optional).
+
+- title: "Redox oscillation frequency drives antibiotic resistance expression through metabolic selection in a freshwater community"
+  authors: "<strong>Bharat Manna</strong>, Ishi Keenum, Qian Liu, Naresh Singhal"
+  status: "Under review"
+  year: 2026
+
+- title: "Redox Perturbations Promote Cometabolic and ROS-Mediated Reaction Networks for Enhanced Organic Micropollutant Removal in Activated Sludge"
+  authors: "Boyu Lyu, <strong>Bharat Manna</strong>, Xueyang Zhou, Ivanhoe K. H. Leung, Naresh Singhal"
+  status: "Under review"
+  year: 2026
+
+- title: "Lysine Rewires Cyanobacterial Metabolism to Simultaneously Inhibit Growth and Promote SMX Degradation"
+  authors: "Dingxin Li, Peifang Wang, Min Sun, Naresh Singhal, Xueyang Zhou, <strong>Bharat Manna</strong>"
+  status: "Under review"
+  year: 2026

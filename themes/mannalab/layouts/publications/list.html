@@ -8,7 +8,8 @@
 {{/* ── TAB NAV ───────────────────────────────────────────── */}}
 <div class="pub-tabnav">
   <div class="container">
-    <a href="#journals"      class="pub-tab active" data-section="journals">Journals</a>
+    <a href="#under-review"  class="pub-tab active" data-section="under-review">Under Review</a>
+    <a href="#journals"      class="pub-tab"        data-section="journals">Journals</a>
     <a href="#conferences"   class="pub-tab"        data-section="conferences">Conferences</a>
     <a href="#book-chapters" class="pub-tab"        data-section="book-chapters">Book Chapters</a>
   </div>
@@ -17,8 +18,42 @@
 <section class="section">
   <div class="container">
 
+    {{/* ── UNDER REVIEW ─────────────────────────────────── */}}
+    <div id="under-review" class="pub-section">
+      <div class="pub-section-head">
+        <div class="eyebrow">In Progress</div>
+        <h2 class="section-title">Under Review</h2>
+      </div>
+
+      {{ $review := hugo.Data.under_review }}
+      {{ if $review }}
+        {{ $rtotal := len $review }}
+        <div class="pub-list">
+        {{ range $i, $r := $review }}
+          {{ $num := sub $rtotal $i }}
+          <div class="pub-item">
+            <div class="pub-num">{{ $num }}</div>
+            <div>
+              <div class="pub-title">{{ $r.title }}</div>
+              <div class="pub-authors">{{ $r.authors | safeHTML }}</div>
+              <div class="pub-journal">
+                {{ with $r.status }}<span class="pub-status">{{ . }}</span>{{ end }}{{ with $r.venue }} &middot; <em>{{ . }}</em>{{ end }}
+              </div>
+              <div class="pub-badges">
+                {{ with $r.doi }}<a href="{{ . }}" class="pub-badge" target="_blank" rel="noopener">bioRxiv DOI</a>{{ end }}
+              </div>
+            </div>
+            {{ with $r.year }}<div class="pub-year-tag">{{ . }}</div>{{ end }}
+          </div>
+        {{ end }}
+        </div>
+      {{ else }}
+        <p class="pub-legend">Manuscripts in preparation and under review will be listed here.</p>
+      {{ end }}
+    </div>
+
     {{/* ── JOURNALS ─────────────────────────────────────── */}}
-    <div id="journals" class="pub-section">
+    <div id="journals" class="pub-section" style="margin-top:4rem">
       <div class="pub-section-head">
         <div class="eyebrow">Peer-Reviewed</div>
         <h2 class="section-title">Journal Articles</h2>
