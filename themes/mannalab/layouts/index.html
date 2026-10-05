@@ -61,31 +61,34 @@
 </section>
 {{ end }}
 
-{{/* ── COLLABORATORS ─────────────────────────────────────── */}}
-{{ with hugo.Data.collaborators }}
+{{/* ── COLLABORATORS ───────────────────────────────────────
+     Built from the files in static/img/logos. The filename is the
+     label, so "University of Auckland, New Zealand.jpg" shows as
+     "University of Auckland, New Zealand" on hover. Drop a file in,
+     it appears. Order is alphabetical by filename. */}}
+{{ $collabs := slice }}
+{{ range (readDir "static/img/logos") }}
+  {{ if and (not .IsDir) (in (slice ".png" ".jpg" ".jpeg" ".svg" ".webp") (lower (path.Ext .Name))) }}
+    {{ $collabs = $collabs | append (dict
+        "name" (strings.TrimSuffix (path.Ext .Name) .Name)
+        "logo" (printf "img/logos/%s" (replace .Name " " "%20") | absURL)) }}
+  {{ end }}
+{{ end }}
+{{ with $collabs }}
 <section class="section section-alt">
   <div class="container">
     <div class="eyebrow">Collaborations</div>
     <h2 class="section-title">Collaborators</h2>
     <div class="collab-viewport">
       <div class="collab-track">
-        {{ range . }}
-        <div class="collab-item">
-          {{ if .logo }}
-            <img src="{{ .logo | absURL }}" alt="{{ .name }}" loading="lazy">
-          {{ else }}
-            <span>{{ .name }}</span>
-          {{ end }}
+        {{ range seq 2 }}
+        {{ $dupe := gt . 1 }}
+        {{ range $collabs }}
+        <div class="collab-item"{{ if $dupe }} aria-hidden="true"{{ end }}>
+          <img src="{{ .logo }}" alt="{{ .name }}" loading="lazy">
+          <span class="collab-name">{{ .name }}</span>
         </div>
         {{ end }}
-        {{ range . }}
-        <div class="collab-item" aria-hidden="true">
-          {{ if .logo }}
-            <img src="{{ .logo | absURL }}" alt="{{ .name }}" loading="lazy">
-          {{ else }}
-            <span>{{ .name }}</span>
-          {{ end }}
-        </div>
         {{ end }}
       </div>
     </div>
