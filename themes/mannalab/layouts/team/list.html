@@ -107,7 +107,7 @@
     {{ if $projects }}
     <h2 class="team-section-label">Project Students</h2>
     {{ $curCohort := "" }}
-    {{ range $projects }}
+    {{ range sort $projects "name" }}
       {{ if ne .cohort $curCohort }}
         {{ if ne $curCohort "" }}</div>{{ end }}
         {{ with .cohort }}<div class="project-cohort">{{ . }}</div>{{ end }}
