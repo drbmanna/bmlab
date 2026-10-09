@@ -415,8 +415,9 @@ ul    { list-style: none; }
 }
 .project-item {
   display: flex; flex-wrap: wrap; align-items: baseline;
-  gap: 0.25rem 0.75rem;
-  padding: 0.85rem 1.25rem;
+  gap: 0.2rem 0.75rem;
+  padding: 0.6rem 1.25rem;
+  line-height: 1.35;
   border-top: 1px solid var(--warm-100);
 }
 .project-item:first-child { border-top: none; }
