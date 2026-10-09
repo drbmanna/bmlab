@@ -400,6 +400,32 @@ ul    { list-style: none; }
   padding-bottom: 0.5rem;
   border-bottom: 1px solid var(--warm-200);
 }
+.project-cohort {
+  font-family: var(--font-heading);
+  font-size: 0.95rem; font-style: italic;
+  color: var(--terra); margin: 0.25rem 0 1rem;
+}
+.project-list {
+  background: var(--white);
+  border: 1px solid var(--warm-200);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+.project-item {
+  display: flex; flex-wrap: wrap; align-items: baseline;
+  gap: 0.25rem 0.75rem;
+  padding: 0.85rem 1.25rem;
+  border-top: 1px solid var(--warm-100);
+}
+.project-item:first-child { border-top: none; }
+.project-name {
+  font-weight: 600; color: var(--charcoal);
+}
+.project-prog {
+  font-size: 0.85rem; color: var(--gray-400);
+}
 .team-card {
   background: var(--white);
   border: 1px solid var(--warm-200);
