@@ -1,4 +1,5 @@
 # role_type options: pi | phd | project | alumni
+# For role_type "project": set programme and cohort. Add project title later.
 
 - name: "Dr. Bharat Manna"
   role: "Associate Professor"
@@ -11,3 +12,29 @@
   scholar: "https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=X2-6aVoAAAAJ"
   orcid: "https://orcid.org/0000-0001-7394-8204"
   linkedin: "https://www.linkedin.com/in/drbmanna"
+
+# ── Project students ──
+- name: "Hazel Shine George"
+  role_type: "project"
+  programme: "B.Tech. Biotechnology"
+  cohort: "Basic Multidisciplinary Project · Fall Semester 2026-27"
+
+- name: "Kartik"
+  role_type: "project"
+  programme: "B.Tech. Computer Science and Engineering"
+  cohort: "Basic Multidisciplinary Project · Fall Semester 2026-27"
+
+- name: "Madhu Yashni Madhavan"
+  role_type: "project"
+  programme: "B.Tech. Chemical Engineering"
+  cohort: "Basic Multidisciplinary Project · Fall Semester 2026-27"
+
+- name: "Shivangi Kala"
+  role_type: "project"
+  programme: "B.Tech. Computer Science and Engineering (Data Science)"
+  cohort: "Basic Multidisciplinary Project · Fall Semester 2026-27"
+
+- name: "J Thameem Junaid"
+  role_type: "project"
+  programme: "B.Tech. Information Technology"
+  cohort: "Basic Multidisciplinary Project · Fall Semester 2026-27"

@@ -102,6 +102,26 @@
       </div>
     </div>
 
+    {{/* ── Project Students ── */}}
+    {{ $projects := where $team "role_type" "project" }}
+    {{ if $projects }}
+    <h2 class="team-section-label">Project Students</h2>
+    {{ $curCohort := "" }}
+    {{ range $projects }}
+      {{ if ne .cohort $curCohort }}
+        {{ if ne $curCohort "" }}</div>{{ end }}
+        {{ with .cohort }}<div class="project-cohort">{{ . }}</div>{{ end }}
+        <div class="project-list">
+        {{ $curCohort = .cohort }}
+      {{ end }}
+      <div class="project-item">
+        <span class="project-name">{{ .name }}</span>
+        {{ with .programme }}<span class="project-prog">{{ . }}</span>{{ end }}
+      </div>
+    {{ end }}
+    {{ if ne $curCohort "" }}</div>{{ end }}
+    {{ end }}
+
     {{/* ── Alumni (hidden until populated) ── */}}
     {{ $alumni := where $team "role_type" "alumni" }}
     {{ if $alumni }}
