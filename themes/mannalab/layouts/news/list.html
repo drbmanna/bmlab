@@ -8,7 +8,7 @@
 <section class="section">
   <div class="container">
     {{ if .Pages }}
-    <div class="news-grid">
+    <div class="news-grid news-grid--stacked">
       {{ range .Pages }}
       <div class="news-card">
         <div class="news-date">{{ if .Params.display_date }}{{ .Params.display_date }}{{ else }}{{ .Date.Format "2 Jan 2006" }}{{ end }}</div>
