@@ -111,6 +111,7 @@
       {{ if ne .cohort $curCohort }}
         {{ if ne $curCohort "" }}</div>{{ end }}
         {{ with .cohort }}<div class="project-cohort">{{ . }}</div>{{ end }}
+        {{ with .project_title }}<div class="project-title">{{ . }}</div>{{ end }}
         <div class="project-list">
         {{ $curCohort = .cohort }}
       {{ end }}
