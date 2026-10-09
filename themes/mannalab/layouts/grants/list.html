@@ -1,0 +1,51 @@
+{{ define "main" }}
+<div class="page-header">
+  <div class="container">
+    <h1>Grants</h1>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+
+    {{/* ── AWARDED ──────────────────────────────────────── */}}
+    <div id="awarded" class="pub-section">
+      <div class="pub-section-head">
+        <div class="eyebrow">Funded</div>
+        <h2 class="section-title">Awarded Grants</h2>
+      </div>
+
+      {{ $grants := hugo.Data.grants }}
+      {{ if $grants }}
+        {{ $total := len $grants }}
+        <div class="pub-list">
+        {{ range $i, $g := $grants }}
+          {{ $num := sub $total $i }}
+          <div class="pub-item">
+            <div class="pub-num">{{ $num }}</div>
+            <div>
+              <div class="pub-title">{{ $g.title }}</div>
+              <div class="pub-authors">
+                {{ $g.agency }}{{ with $g.scheme }} &middot; <em>{{ . }}</em>{{ end }}
+              </div>
+              <div class="pub-journal">
+                {{ with $g.role }}<strong>{{ . }}</strong>{{ end }}{{ with $g.amount }} &middot; {{ . }}{{ end }}{{ with $g.period }} &middot; {{ . }}{{ end }}
+              </div>
+              <div class="pub-badges">
+                {{ with $g.status }}<span class="pub-status">{{ . }}</span>{{ end }}
+                {{ with $g.grant_number }}<span class="pub-badge" style="cursor:default">Sanction No. {{ . }}</span>{{ end }}
+              </div>
+            </div>
+            {{ with $g.period }}<div class="pub-year-tag">{{ . }}</div>{{ end }}
+          </div>
+        {{ end }}
+        </div>
+      {{ else }}
+        <p class="pub-legend">Awarded research grants will be listed here.</p>
+      {{ end }}
+    </div>
+
+  </div>
+</section>
+
+{{ end }}
