@@ -1,5 +1,5 @@
 ---
-title: "SEED grant awarded for antibiotic resistance research in Indian soils"
+title: "SEED grant awarded for antibiotic resistance research in soils"
 date: 2026-10-05
 display_date: "5 Oct 2026"
 ---
