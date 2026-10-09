@@ -44,7 +44,7 @@
     <div class="eyebrow">Latest Updates</div>
     <h2 class="section-title">News</h2>
     <p class="section-sub">Updates from the lab.</p>
-    <div class="news-grid">
+    <div class="news-grid news-grid--stacked">
       {{ range $news }}
       <div class="news-card">
         <div class="news-date">{{ if .Params.display_date }}{{ .Params.display_date }}{{ else }}{{ .Date.Format "2 Jan 2006" }}{{ end }}</div>
