@@ -233,6 +233,9 @@ ul    { list-style: none; }
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.25rem;
 }
+.news-grid--stacked {
+  grid-template-columns: 1fr;
+}
 .news-card {
   padding: 1.4rem 1.4rem 1.4rem 1.2rem;
   background: var(--white);
