@@ -1,0 +1,14 @@
+# Awarded research grants. Newest first.
+# role: PI / Co-PI / Co-I
+# status: Ongoing / Completed
+# amount: display string, Indian format (e.g. "₹6,00,000")
+# grant_number: sanction / sanction-order number (optional)
+
+- title: "Biomedical waste disposal sites as potential reservoirs of antibiotic resistance in Indian soils"
+  agency: "VIT SEED Grant (RGEMS)"
+  scheme: "Multidisciplinary Research Grant"
+  role: "PI"
+  amount: "₹6,00,000"
+  period: "2026–2027"
+  status: "Ongoing"
+  grant_number: "SG20260366"
