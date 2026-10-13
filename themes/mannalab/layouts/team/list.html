@@ -32,6 +32,7 @@
           <div class="team-name">{{ .name }}</div>
           <div class="team-role">{{ .role }}</div>
           {{ with .department }}<div class="team-dept">{{ . }}</div>{{ end }}
+          {{ with .school }}<div class="team-dept">{{ . }}</div>{{ end }}
           {{ with .location }}<div class="team-location">{{ . }}</div>{{ end }}
           {{ partial "social-links.html" . }}
           <a href="{{ "/bm/" | relURL }}" class="pi-more-link">Full profile &rarr;</a>

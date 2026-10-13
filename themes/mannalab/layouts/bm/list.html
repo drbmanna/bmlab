@@ -28,6 +28,7 @@
         <div class="pi-profile-name">{{ $pi.name }}</div>
         <div class="pi-profile-role">{{ $pi.role }}</div>
         {{ with $pi.department }}<div class="pi-profile-line">{{ . }}</div>{{ end }}
+        {{ with $pi.school }}<div class="pi-profile-line">{{ . }}</div>{{ end }}
         {{ with $pi.location }}<div class="pi-profile-line">{{ . }}</div>{{ end }}
         {{ with $pi.email }}<div class="pi-profile-line"><a href="mailto:{{ . }}">{{ . }}</a></div>{{ end }}
         {{ partial "social-links.html" $pi }}
