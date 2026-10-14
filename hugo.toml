@@ -71,3 +71,9 @@ disableKinds = ["taxonomy", "term"]
     name   = "Contact"
     url    = "/contact/"
     weight = 11
+  [[menu.main]]
+    name   = "GitHub"
+    url    = "https://github.com/drbmanna"
+    weight = 12
+    [menu.main.params]
+      icon = "github"
