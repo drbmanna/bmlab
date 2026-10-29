@@ -14,14 +14,14 @@ terms:
         type: "Theory"
         credits: "3 credits · 45 lecture hours"
         description: >
-          A systems view of biology that connects data structures to cellular behaviour.
-          The course opens with biological databases and the string and graph algorithms
-          used to search sequence data, then moves to transcript-level analysis, where array
-          data is classified with machine learning. Later modules cover the representation of
-          biological networks, from molecular interaction maps to synthetic biology design,
-          before turning to integrative concepts in cell signalling and intercellular
-          communication. The final modules deal with biological regulation, including
-          biointegration and the maintenance of internal stability.
+          A systems view of biology that runs from raw sequence to whole-cell regulation.
+          It opens with genomes and the string and graph algorithms behind sequence comparison
+          and assembly, including next-generation sequencing. Transcript analysis follows, where
+          expression and microarray data are clustered and classified with Bayesian methods,
+          support vector machines, and semi-supervised learning, alongside epigenomics and ChIP
+          data. Later modules build biological networks from molecular interactions, with
+          centrality, community structure, and synthetic biology, then close on integrative cell
+          signalling and the regulatory systems that keep cells stable.
 
   - heading: "Fall 2026–27"
     courses:
