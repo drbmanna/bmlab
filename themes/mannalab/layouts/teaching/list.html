@@ -15,34 +15,18 @@
     <p class="section-sub" style="margin-bottom:2.5rem">{{ . | markdownify }}</p>
     {{ end }}
 
-    {{ with $d.current }}
-    <div class="section-eyebrow"></div>
-    <h2 class="section-title">{{ default "Current Courses" $d.current_heading }}</h2>
-    {{ range . }}
-    <div class="course-card">
-      <div class="course-head">
-        <span class="course-code">{{ .code }}</span>
-        {{ with .type }}<span class="course-type">{{ . }}</span>{{ end }}
-      </div>
-      <div class="course-title">{{ .title }}</div>
-      <div class="course-meta">{{ .programme }}{{ with .credits }} · {{ . }}{{ end }}</div>
-      {{ with .description }}<p class="course-desc">{{ . | markdownify }}</p>{{ end }}
-    </div>
-    {{ end }}
-    {{ end }}
-
-    {{ with $d.past }}
-    <div style="margin-top:3rem">
+    {{ range $i, $term := $d.terms }}
+    <div{{ if gt $i 0 }} style="margin-top:3rem"{{ end }}>
       <div class="section-eyebrow"></div>
-      <h2 class="section-title">Previously Taught</h2>
-      {{ range . }}
-      <div class="course-card past">
+      <h2 class="section-title">{{ $term.heading }}</h2>
+      {{ range $term.courses }}
+      <div class="course-card">
         <div class="course-head">
           <span class="course-code">{{ .code }}</span>
           {{ with .type }}<span class="course-type">{{ . }}</span>{{ end }}
         </div>
         <div class="course-title">{{ .title }}</div>
-        <div class="course-meta">{{ .programme }}{{ with .term }} · {{ . }}{{ end }}{{ with .credits }} · {{ . }}{{ end }}</div>
+        <div class="course-meta">{{ .programme }}{{ with .credits }} · {{ . }}{{ end }}</div>
         {{ with .description }}<p class="course-desc">{{ . | markdownify }}</p>{{ end }}
       </div>
       {{ end }}
