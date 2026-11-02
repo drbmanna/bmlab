@@ -2,6 +2,11 @@
 # status: e.g. "Under review", "Under revision", "Submitted"
 # venue: target journal (optional). doi: bioRxiv/preprint DOI (optional).
 
+- title: "Non-Targeted HRMS and Metagenomic Profiling Reveal Land Use-Driven Chemical Exposomes and Resistomes in New Zealand Freshwaters"
+  authors: "Gevargis Muramthookil Thomas, Boyu Lyu, <strong>Bharat Manna</strong>, Naresh Singhal#"
+  status: "Under review"
+  year: 2026
+
 - title: "Redox oscillation frequency reshapes antibiotic resistance-gene expression through metabolic and ecological selection in a freshwater community"
   authors: "<strong>Bharat Manna</strong>, Ishi Keenum, Qian Liu, Naresh Singhal"
   status: "Under review"
