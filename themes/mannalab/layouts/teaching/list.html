@@ -28,6 +28,7 @@
         <div class="course-title">{{ .title }}</div>
         <div class="course-meta">{{ .programme }}{{ with .credits }} · {{ . }}{{ end }}</div>
         {{ with .description }}<p class="course-desc">{{ . | markdownify }}</p>{{ end }}
+        {{ with .feedback }}<p class="course-feedback">{{ . | markdownify }}</p>{{ end }}
       </div>
       {{ end }}
     </div>

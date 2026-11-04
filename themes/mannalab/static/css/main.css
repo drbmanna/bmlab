@@ -1171,6 +1171,13 @@ ul    { list-style: none; }
   text-align: justify;
   hyphens: auto;
 }
+.course-feedback {
+  color: var(--terra);
+  font-style: italic;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-top: 1.1rem;
+}
 
 /* Full-profile link on the trimmed Team page PI card */
 .pi-more-link {
