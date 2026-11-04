@@ -39,6 +39,9 @@ terms:
           selection. Later modules move into image segmentation, deep learning for medical imaging
           and diagnostics, and genome signal processing for hotspot identification.
 
+
+          Student feedback, Fall 2026-27: 89.3% average instructor rating (27 of 30 students responding).
+
       - code: "BBIT417P"
         title: "Analytical Bioinformatics Lab"
         programme: "B.Tech. CSE (Bioinformatics)"
@@ -50,6 +53,9 @@ terms:
           dot plot methods before moving to BLAST searches and multiple sequence alignment with
           phylogeny in Clustal Omega. The structural half covers motif and domain searching, the
           PDB, protein secondary structure prediction, and 3D structure visualisation.
+
+
+          Student feedback, Fall 2026-27: 88.8% average instructor rating (67 of 69 students responding).
 
 # Optional. Shown under a "Student Projects" heading if non-empty.
 projects: []
