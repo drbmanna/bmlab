@@ -1,5 +1,18 @@
-# 28 peer-reviewed publications. DOI fields left blank — fill in from journal pages.
+# 29 peer-reviewed publications. DOI fields left blank — fill in from journal pages.
 # * = equal contribution. Bharat Manna bolded in authors.
+
+- title: "Redox Perturbations Promote Oxidative and Cometabolic Reaction Networks for Enhanced Organic Micropollutant Removal in Activated Sludge"
+  authors: "Boyu Lyu, <strong>Bharat Manna</strong>, Xueyang Zhou, Ivanhoe K. H. Leung, Naresh Singhal<sup>#</sup>"
+  journal: "Environmental Science & Technology"
+  volume: "(in press)"
+  pages: ""
+  year: 2026
+  impact_factor: 12.2
+  doi: ""
+  pdf: ""
+  code: ""
+  preprint: ""
+  highlighted: false
 
 - title: "Minute-Scale Oxic-Anoxic Cycling Enables Nitrous Oxide Reductase Reactivation under Anoxic Conditions to Reduce N2O Emissions in Wastewater Treatment"
   authors: "Xueyang Zhou, <strong>Bharat Manna</strong>, Boyu Lyu, Catherine Hoar, Naresh Singhal"
@@ -7,7 +20,7 @@
   volume: "60(14)"
   pages: "10728–10738"
   year: 2026
-  impact_factor: 11.3
+  impact_factor: 12.2
   doi: "https://doi.org/10.1021/acs.est.6c02189"
   pdf: ""
   code: ""
