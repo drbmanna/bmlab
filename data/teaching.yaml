@@ -6,23 +6,6 @@
 intro: ""
 
 terms:
-  - heading: "Winter 2026–27"
-    courses:
-      - code: "PABIT621"
-        title: "Computational and Integrative Biology"
-        programme: "M.Sc. Biotechnology"
-        type: "Theory"
-        credits: "3 credits · 45 lecture hours"
-        description: >
-          A systems view of biology that runs from raw sequence to whole-cell regulation.
-          It opens with genomes and the string and graph algorithms behind sequence comparison
-          and assembly, including next-generation sequencing. Transcript analysis follows, where
-          expression and microarray data are clustered and classified with Bayesian methods,
-          support vector machines, and semi-supervised learning, alongside epigenomics and ChIP
-          data. Later modules build biological networks from molecular interactions, with
-          centrality, community structure, and synthetic biology, then close on integrative cell
-          signalling and the regulatory systems that keep cells stable.
-
   - heading: "Fall 2026–27"
     courses:
       - code: "BBIT327L"
