@@ -2,6 +2,11 @@
 # status: e.g. "Under review", "Under revision", "Submitted"
 # venue: target journal (optional). doi: bioRxiv/preprint DOI (optional).
 
+- title: "Host-community turnover tracks clearance of the non-van antibiotic resistome across the oxic-to-methanogenic transition in two full-scale anaerobic digesters"
+  authors: "<strong>Bharat Manna</strong><sup>#</sup>, Min Wang, Naresh Singhal<sup>#</sup>"
+  status: "Under review"
+  year: 2026
+
 - title: "Non-Targeted HRMS and Metagenomic Profiling Reveal Land Use-Driven Chemical Exposomes and Resistomes in New Zealand Freshwaters"
   authors: "Gevargis Muramthookil Thomas, Boyu Lyu, <strong>Bharat Manna</strong>, Naresh Singhal<sup>#</sup>"
   status: "Under review"
